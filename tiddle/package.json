@@ -21,6 +21,7 @@
     "@typescript-eslint/parser": "^6.18.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "sass": "^1.69.7",
     "typescript": "^5"
   }
 }
