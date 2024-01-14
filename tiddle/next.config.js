@@ -6,11 +6,5 @@ module.exports = (phase, { defaultConfig }) => {
 			prependData: `@import "~@styles/_variables.scss";`
 		};
 	}
-	return {
-		serverRuntimeConfig: {
-			// ...
-			cookieSecret: process.env.NEXT_SECRET_COOKIE // ваш секрет для кук
-		},
-		...defaultConfig
-	};
+	return defaultConfig;
 };
