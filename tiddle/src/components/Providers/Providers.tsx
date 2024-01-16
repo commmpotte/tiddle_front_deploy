@@ -1,8 +1,8 @@
-'use clint';
+'use client';
 
 import { SessionProvider } from 'next-auth/react';
 import { ReactNode } from 'react';
 
-export function Providers({ childern }: { children: ReactNode }) {
-	return <SessionProvider>{childern}</SessionProvider>;
+export function Providers({ children }: { children: ReactNode }) {
+	return <SessionProvider>{children}</SessionProvider>;
 }
