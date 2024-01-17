@@ -4,4 +4,55 @@
 	justify-content: center;
 	align-items: center;
 	gap: 32px;
+	color: $secondary-text;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: capitalize;
+	padding: 20px;
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+	}
+
+	.wrapperRemember {
+		display: flex;
+		justify-content: space-between;
+
+		.remember {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+
+			input[type='checkbox'] {
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				width: 20px;
+				height: 20px;
+				border-radius: 4px;
+				outline: none;
+				border: 2px solid $border-checkbox-color;
+			}
+
+			input[type='checkbox']:checked {
+				background-color: $border-checkbox-color;
+				border-color: $active-color;
+			}
+		}
+	}
+
+	.link {
+		text-decoration: none;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: capitalize;
+		color: $active-color;
+	}
 }

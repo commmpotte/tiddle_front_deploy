@@ -11,6 +11,9 @@ export const Input = forwardRef(
 	) => {
 		return (
 			<div className={styles.wrapper}>
+				<label className={styles.label} htmlFor={type}>
+					{label}
+				</label>
 				<input
 					type={type}
 					ref={ref}

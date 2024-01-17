@@ -10,19 +10,27 @@ export function LoginForm() {
 		<div className={styles.wrapper}>
 			<img src="auth/MobileLogo.png" alt="Mobile logo tiddle" />
 			<Htag tag="h1">Authorization</Htag>
-			<form>
-				<Input placeholder="Email" label="Email" />
-				<Input placeholder="Password" label="Password" />
-				<div>
-					<label>
+			<form className={styles.form}>
+				<Input placeholder="example@example.com" label="Email" />
+				<Input placeholder="********" label="Password" />
+				<div className={styles.wrapperRemember}>
+					<label className={styles.remember}>
 						<input type="checkbox" />
 						Remember me
 					</label>
-					<Link href="#">Forgot password?</Link>
+					<Link href="#" className={styles.link}>
+						Forgot password?
+					</Link>
 				</div>
 				<Gbutton />
 				<Button>Login</Button>
 			</form>
+			<div>
+				<span>Don’t have an account? </span>
+				<Link href="#" className={styles.link}>
+				Sing up
+				</Link>
+			</div>
 		</div>
 	);
 }
