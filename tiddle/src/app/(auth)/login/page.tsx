@@ -1,9 +1,9 @@
-import { Input } from '@/components/Input/Input';
+import { LoginForm } from './_components/LoginForm/LoginForm';
 
 export default function Login() {
 	return (
 		<main>
-			<Input placeholder="Email" />
+			<LoginForm />
 		</main>
 	);
 }
