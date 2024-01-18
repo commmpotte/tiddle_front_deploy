@@ -2,6 +2,7 @@ import { Providers } from '@/components/Providers/Providers';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,8 +18,17 @@ export default function AuthLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<Providers>{children}</Providers>
+			<header>
+				<link
+					href="https://fonts.cdnfonts.com/css/sf-pro-display"
+					rel="stylesheet"
+				></link>
+			</header>
+			<body>
+				<Providers>
+					{children}
+					<Toaster position="bottom-left" />
+				</Providers>
 			</body>
 		</html>
 	);
