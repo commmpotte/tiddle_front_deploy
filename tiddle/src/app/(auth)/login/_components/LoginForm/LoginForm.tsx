@@ -1,7 +1,6 @@
 'use client';
 import { Button } from '@/components/Button/Button';
 import { Gbutton } from '@/components/Gbutton/Gbutton';
-import { Htag } from '@/components/Htag/Htag';
 import { Input } from '@/components/Input/Input';
 import Link from 'next/link';
 import styles from './LoginForm.module.scss';
@@ -29,61 +28,40 @@ export function LoginForm() {
 		}
 	};
 	return (
-		<div className={styles.mobileWrapper}>
-			<img
-				src="auth/MobileLogo.svg"
-				alt="Mobile logo tiddle"
-				className={styles.mobileLogo}
+		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+			<Input
+				{...register('identifier', {
+					required: {
+						value: true,
+						message: 'Enter your email address'
+					}
+				})}
+				placeholder="example@example.com"
+				label="Email"
+				error={errors.identifier}
 			/>
-			<div className={styles.wrapper}>
-				<img
-					src="auth/mainLogo.svg"
-					alt="MainMenu"
-					className={styles.mainLogo}
-				/>
-				<Htag tag="h1">Authorization</Htag>
-				<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-					<Input
-						{...register('identifier', {
-							required: {
-								value: true,
-								message: 'Enter your email address'
-							}
-						})}
-						placeholder="example@example.com"
-						label="Email"
-						error={errors.identifier}
-					/>
-					<Input
-						{...register('password', {
-							required: {
-								value: true,
-								message: 'Enter your email address'
-							}
-						})}
-						placeholder="********"
-						label="Password"
-						error={errors.password}
-					/>
-					<div className={styles.wrapperRemember}>
-						<label className={styles.remember}>
-							<input type="checkbox" />
-							Remember me
-						</label>
-						<Link href="#" className={styles.link}>
-							Forgot password?
-						</Link>
-					</div>
-					<Gbutton />
-					<Button>Login</Button>
-				</form>
-				<div>
-					<span>Don’t have an account? </span>
-					<Link href="#" className={styles.link}>
-						Sing up
-					</Link>
-				</div>
+			<Input
+				{...register('password', {
+					required: {
+						value: true,
+						message: 'Enter your email address'
+					}
+				})}
+				placeholder="********"
+				label="Password"
+				error={errors.password}
+			/>
+			<div className={styles.wrapperRemember}>
+				<label className={styles.remember}>
+					<input type="checkbox" />
+					Remember me
+				</label>
+				<Link href="#" className={styles.link}>
+					Forgot password?
+				</Link>
 			</div>
-		</div>
+			<Gbutton />
+			<Button>Login</Button>
+		</form>
 	);
 }
