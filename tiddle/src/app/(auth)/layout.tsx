@@ -18,12 +18,12 @@ export default function AuthLayout({
 }) {
 	return (
 		<html lang="en">
-			<header>
+			<head>
 				<link
 					href="https://fonts.cdnfonts.com/css/sf-pro-display"
 					rel="stylesheet"
 				></link>
-			</header>
+			</head>
 			<body>
 				<Providers>
 					{children}

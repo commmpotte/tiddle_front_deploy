@@ -29,50 +29,60 @@ export function LoginForm() {
 		}
 	};
 	return (
-		<div className={styles.wrapper}>
-			<img src="auth/MobileLogo.png" alt="Mobile logo tiddle" className={styles.mobileLogo} />
-			<img src="auth/mainLogo.svg" alt="MainMenu" className={styles.mainLogo} />
-			<Htag tag="h1">Authorization</Htag>
-			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-				<Input
-					{...register('identifier', {
-						required: {
-							value: true,
-							message: 'Enter your email address'
-						}
-					})}
-					placeholder="example@example.com"
-					label="Email"
-					error={errors.identifier}
+		<div className={styles.mobileWrapper}>
+			<img
+				src="auth/MobileLogo.svg"
+				alt="Mobile logo tiddle"
+				className={styles.mobileLogo}
+			/>
+			<div className={styles.wrapper}>
+				<img
+					src="auth/mainLogo.svg"
+					alt="MainMenu"
+					className={styles.mainLogo}
 				/>
-				<Input
-					{...register('password', {
-						required: {
-							value: true,
-							message: 'Enter your email address'
-						}
-					})}
-					placeholder="********"
-					label="Password"
-					error={errors.password}
-				/>
-				<div className={styles.wrapperRemember}>
-					<label className={styles.remember}>
-						<input type="checkbox" />
-						Remember me
-					</label>
+				<Htag tag="h1">Authorization</Htag>
+				<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+					<Input
+						{...register('identifier', {
+							required: {
+								value: true,
+								message: 'Enter your email address'
+							}
+						})}
+						placeholder="example@example.com"
+						label="Email"
+						error={errors.identifier}
+					/>
+					<Input
+						{...register('password', {
+							required: {
+								value: true,
+								message: 'Enter your email address'
+							}
+						})}
+						placeholder="********"
+						label="Password"
+						error={errors.password}
+					/>
+					<div className={styles.wrapperRemember}>
+						<label className={styles.remember}>
+							<input type="checkbox" />
+							Remember me
+						</label>
+						<Link href="#" className={styles.link}>
+							Forgot password?
+						</Link>
+					</div>
+					<Gbutton />
+					<Button>Login</Button>
+				</form>
+				<div>
+					<span>Don’t have an account? </span>
 					<Link href="#" className={styles.link}>
-						Forgot password?
+						Sing up
 					</Link>
 				</div>
-				<Gbutton />
-				<Button>Login</Button>
-			</form>
-			<div>
-				<span>Don’t have an account? </span>
-				<Link href="#" className={styles.link}>
-					Sing up
-				</Link>
 			</div>
 		</div>
 	);
