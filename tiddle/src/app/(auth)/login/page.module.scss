@@ -1,0 +1,18 @@
+.wrapperMain {
+	.leftImg {
+		display: none;
+	}
+
+	@media (min-width: 900px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		align-items: center;
+		gap: 50px;
+
+		.leftImg {
+			display: block;
+			height: 100vh;
+		}
+	}
+}

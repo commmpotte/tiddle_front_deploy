@@ -1,3 +1,4 @@
+'use client';
 import { Button } from '@/components/Button/Button';
 import { Gbutton } from '@/components/Gbutton/Gbutton';
 import { Htag } from '@/components/Htag/Htag';
@@ -5,8 +6,8 @@ import { Input } from '@/components/Input/Input';
 import Link from 'next/link';
 import styles from './LoginForm.module.scss';
 import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 type Inputs = {
 	identifier: string;
@@ -19,7 +20,6 @@ export function LoginForm() {
 		formState: { errors }
 	} = useForm<Inputs>();
 	const router = useRouter();
-
 	const onSubmit = async (data: Inputs) => {
 		const result = await signIn('credentials', data);
 		if (result && !result.error) {
@@ -30,7 +30,8 @@ export function LoginForm() {
 	};
 	return (
 		<div className={styles.wrapper}>
-			<img src="auth/MobileLogo.png" alt="Mobile logo tiddle" />
+			<img src="auth/MobileLogo.png" alt="Mobile logo tiddle" className={styles.mobileLogo} />
+			<img src="auth/mainLogo.svg" alt="MainMenu" className={styles.mainLogo} />
 			<Htag tag="h1">Authorization</Htag>
 			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 				<Input

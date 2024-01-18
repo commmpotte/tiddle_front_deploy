@@ -4,6 +4,13 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 80%;
+
+	@media (min-width: 900) {
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 80%;
+	}
 }
 
 .h2 {

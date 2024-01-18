@@ -22,6 +22,7 @@
 	.wrapperRemember {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
 		.remember {
 			display: flex;
@@ -54,5 +55,19 @@
 		line-height: normal;
 		text-transform: capitalize;
 		color: $active-color;
+	}
+
+	.mainLogo {
+		display: none;
+	}
+
+	@media (min-width: 900px) {
+		.mainLogo {
+			display: block;
+		}
+
+		.mobileLogo {
+			display: none;
+		}
 	}
 }
