@@ -20,6 +20,11 @@ export default function AuthLayout({
 		<html lang="en">
 			<head>
 				<link
+					href="https://fonts.cdnfonts.com/css/eurofurence"
+					rel="stylesheet"
+				/>
+
+				<link
 					href="https://fonts.cdnfonts.com/css/sf-pro-display"
 					rel="stylesheet"
 				></link>
