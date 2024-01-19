@@ -5,7 +5,7 @@ import { AuthPageProps } from './AuthPage.props';
 
 export function AuthPage({ children, tag, type, ...props }: AuthPageProps) {
 	return (
-		<div className={styles.mobileWrapper}>
+		<div className={styles.mobileWrapper} {...props}>
 			<img
 				src="auth/MobileLogo.svg"
 				alt="Mobile logo tiddle"

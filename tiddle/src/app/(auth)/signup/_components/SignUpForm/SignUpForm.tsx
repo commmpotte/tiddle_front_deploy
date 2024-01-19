@@ -2,7 +2,6 @@
 import { Button } from '@/components/Button/Button';
 import { Gbutton } from '@/components/Gbutton/Gbutton';
 import { Input } from '@/components/Input/Input';
-import Link from 'next/link';
 import styles from './SignUpForm.module.scss';
 import { useForm } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
@@ -11,6 +10,7 @@ import { useRouter } from 'next/navigation';
 type Inputs = {
 	identifier: string;
 	password: string;
+	repeatPassword: string;
 };
 export function SignUpForm() {
 	const {
@@ -52,7 +52,7 @@ export function SignUpForm() {
 				error={errors.password}
 			/>
 			<Input
-				{...register('Repeatpassword', {
+				{...register('repeatPassword', {
 					required: {
 						value: true,
 						message: 'Enter your email address'
