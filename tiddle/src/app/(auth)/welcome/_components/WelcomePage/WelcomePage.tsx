@@ -5,15 +5,18 @@ import { useState } from 'react';
 import { welcomeInformation } from '@/helps/welcome.helps';
 import { useRouter } from 'next/navigation';
 import { AuthPage } from '@/app/(auth)/_components/AuthPage/AuthPage';
+import { useStateWelcome } from '@/storage/welcomeState';
 
 export default function WelcomePage() {
 	const [screenPosition, setScreenPosition] = useState<number>(1);
 	const router = useRouter();
+	const stateWelcome = useStateWelcome((s) => s.setState);
 	const handlerClick = () => {
 		if (screenPosition <= 2) {
 			setScreenPosition(() => screenPosition + 1);
 		}
 		if (screenPosition === 3) {
+			stateWelcome();
 			router.push('/login');
 		}
 	};
