@@ -3,14 +3,29 @@ import Link from 'next/link';
 import styles from './AuthPage.module.scss';
 import { AuthPageProps } from './AuthPage.props';
 
-export function AuthPage({ children, tag, type, ...props }: AuthPageProps) {
+export function AuthPage({
+	children,
+	tag,
+	type,
+	url,
+	...props
+}: AuthPageProps) {
 	return (
 		<div className={styles.mobileWrapper} {...props}>
+			{url && (
+				<img
+					src={url}
+					alt="Mobile background"
+					className={styles.screenBackground}
+				/>
+			)}
+
 			<img
 				src="auth/MobileLogo.svg"
 				alt="Mobile logo tiddle"
 				className={styles.mobileLogo}
 			/>
+
 			<div className={styles.wrapper}>
 				<img
 					src="auth/mainLogo.svg"

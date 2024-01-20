@@ -4,5 +4,6 @@ export interface AuthPageProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	children: ReactNode;
 	tag: string;
-	type: 'login' | 'signup';
+	type: 'login' | 'signup' | 'none';
+	url?: string;
 }

@@ -3,9 +3,20 @@
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	display: flex;
+	height: 100vh;
+	justify-content: space-between;
 	gap: 130px;
 	align-items: center;
 	flex-direction: column;
+	z-index: 1;
+
+	.screenBackground {
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		width: 100%;
+	}
 
 	.mobileLogo {
 		margin-top: 120px;
@@ -23,9 +34,10 @@
 		font-weight: 400;
 		line-height: normal;
 		text-transform: capitalize;
-		padding: 0 20px 20px 20px;
+		padding: 0 20px 30px 20px;
 		background: $white;
 		border-radius: 60px 60px 0px 0px;
+		z-index: 100;
 
 		.link {
 			text-decoration: none;
@@ -45,14 +57,13 @@
 			.mainLogo {
 				display: block;
 			}
-
-			.mobileLogo {
-				display: none;
-			}
 		}
 	}
 
 	@media (min-width: 900px) {
 		background: transparent;
+		.mobileLogo {
+			display: none;
+		}
 	}
 }
