@@ -4,15 +4,13 @@
 	}
 
 	@media (min-width: 900px) {
-		display: flex;
-		flex-direction: row;
-		justify-content: left;
-		align-items: center;
-		gap: 50px;
+		display: grid;
+		grid-template-columns: auto 1fr 1fr;
 
 		.leftImg {
 			display: block;
-			height: 100vh;
+			max-width: 100%;
+			height: auto;
 		}
 	}
 }
