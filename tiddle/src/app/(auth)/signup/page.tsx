@@ -1,8 +1,8 @@
 import { AuthPage } from '../_components/AuthPage/AuthPage';
-import { LoginForm } from './_components/LoginForm/LoginForm';
+import { SignUpForm } from './_components/SignUpForm/SignUpForm';
 import styles from './page.module.scss';
 
-export default function Login() {
+export default function SignUp() {
 	return (
 		<main className={styles.wrapperMain}>
 			<img
@@ -10,8 +10,8 @@ export default function Login() {
 				alt="Превью проекта"
 				className={styles.leftImg}
 			/>
-			<AuthPage type="login" tag="Authorization">
-				<LoginForm />
+			<AuthPage type="signup" tag="Sing up">
+				<SignUpForm />
 			</AuthPage>
 		</main>
 	);

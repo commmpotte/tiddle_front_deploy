@@ -1,0 +1,30 @@
+.h1 {
+	color: $text-color;
+	font-family: 'eurofurence', sans-serif;
+	font-size: 34px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 80%;
+	margin: 0;
+	margin-top: 81px;
+	@media (min-width: 900) {
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 80%;
+	}
+}
+
+.h2 {
+}
+
+.h3 {
+}
+
+.text {
+	color: $text-color;
+}
+
+.primary {
+	color: $white;
+}
