@@ -1,0 +1,115 @@
+<mjml>
+	<mj-head>
+		<mj-font
+			name="SFPro"
+			href="https://fonts.cdnfonts.com/css/sf-pro-display"
+		/>
+		<mj-font
+			name="Inter"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+		/>
+	</mj-head>
+	<mj-body background-color="#FFF">
+		<mj-wrapper padding="20px 20px 20px 20px">
+			<mj-hero
+				background-url="/static/left.png"
+				background-width="570px"
+				mode="fluid-height"
+				background-height="469px"
+			>
+				<mj-image
+					src="/static/avatar.jpg"
+					width="76px"
+					align="center"
+					border-radius="50%"
+				></mj-image>
+				<mj-text
+					font-size="70px"
+					font-family="SFPro"
+					color="#FFF"
+					align="center"
+					font-weight="700"
+					>hello there</mj-text
+				>
+				<mj-text
+					font-size="16px"
+					font-family="SFPro"
+					color="#FFF"
+					align="center"
+					font-style="normal"
+					font-weight="500"
+					line-height="20px"
+					padding="0 90px"
+					>You are seeing this message because you requested a password
+					change</mj-text
+				>
+			</mj-hero>
+
+			<mj-section>
+				<mj-column background-color="#FFF">
+					<mj-image
+						src="/static/logo.svg"
+						width="174px"
+						border="20px solid #FFF"
+						align="center"
+					></mj-image>
+					<mj-text
+						font-size="16px"
+						font-family="Inter"
+						color="#262932"
+						align="left"
+						font-style="normal"
+						font-weight="400"
+						line-height="22px"
+						>Hi User Name,</mj-text
+					>
+					<mj-text
+						font-size="16px"
+						font-family="Inter"
+						color="#262932"
+						align="left"
+						font-style="normal"
+						font-weight="400"
+						line-height="22px"
+						>You've requested a password reset for your Tiddle account.</mj-text
+					>
+					<mj-button
+						background-color="#A87BFF"
+						border-radius="20px"
+						width="335px"
+						font-family="SFPro"
+						padding="12px 99px 12px 98px"
+						font-size="20px"
+						font-family="SF Pro Display"
+						font-style="normal"
+						font-weight="500"
+						line-height="28px"
+						>Click here to reset it</mj-button
+					>
+					<mj-text
+						font-size="16px"
+						font-family="Inter"
+						color="#262932"
+						align="left"
+						font-style="normal"
+						font-weight="400"
+						line-height="22px"
+						>If this wasn't you, reach out to us at [наш электронный адрес
+						почты].</mj-text
+					>
+
+					<mj-text
+						font-size="16px"
+						font-family="Inter"
+						color="#262932"
+						align="left"
+						font-style="normal"
+						font-weight="400"
+						line-height="22px"
+						>The Tiddle Team</mj-text
+					>
+				</mj-column>
+			</mj-section>
+		</mj-wrapper>
+	</mj-body>
+</mjml>
