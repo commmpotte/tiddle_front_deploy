@@ -1,6 +1,6 @@
-import { IauthData } from '@/interfaces/authdata.interface';
-import { isApiError } from '@/interfaces/error.interface';
-export async function AuthApi(dataLogin: IauthData) {
+import { isApiError } from '@/types/interfaces/error.interface';
+
+export async function AuthApi(dataLogin) {
 	try {
 		const data = await fetch(process.env.API_URL + '/auth/local', {
 			method: 'POST',
