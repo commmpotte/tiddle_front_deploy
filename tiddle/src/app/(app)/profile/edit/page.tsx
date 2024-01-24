@@ -1,5 +1,6 @@
 'use client';
 import { CodeInput } from '@/components/CodeInput/CodeInput';
+import { Copy } from '@/components/Copy/Copy';
 import { GenderBtn } from '@/components/GenderBtn/GenderBtn';
 
 export default function Edit() {
@@ -12,9 +13,9 @@ export default function Edit() {
 		<>
 			<GenderBtn gender="male" />
 			<GenderBtn gender="female" />
-			<CodeInput
-				callback={handleCodeSubmit}
-			/>
+			<CodeInput callback={handleCodeSubmit} />
+
+			<Copy text={"ADAWA"} />
 		</>
 	);
 }
