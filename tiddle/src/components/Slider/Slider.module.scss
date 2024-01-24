@@ -1,0 +1,27 @@
+.slider-wrapper {
+	box-sizing: content-box;
+
+	// img {
+	// 	max-width: 137px;
+	// 	max-height: 137px;
+	// }
+
+	.slider-wrapper div > ul > li {
+		opacity: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.3s;
+	}
+
+	.items {
+		background: #fff;
+		border-radius: 60px;
+		padding: 10px;
+		box-shadow: 0px 4px 29.4px 5px rgba(200, 185, 230, 0.15);
+		transform: scale(0.9);
+	}
+	.current {
+		transform: scale(1.3);
+	}
+}

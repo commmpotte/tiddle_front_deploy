@@ -2,6 +2,7 @@
 import { CodeInput } from '@/components/CodeInput/CodeInput';
 import { Copy } from '@/components/Copy/Copy';
 import { GenderBtn } from '@/components/GenderBtn/GenderBtn';
+import { Slider } from '@/components/Slider/Slider';
 
 export default function Edit() {
 	const handleCodeSubmit = async (code: string) => {
@@ -15,7 +16,9 @@ export default function Edit() {
 			<GenderBtn gender="female" />
 			<CodeInput callback={handleCodeSubmit} />
 
-			<Copy text={"ADAWA"} />
+			<Copy text={'ADAWA'} />
+
+			<Slider />
 		</>
 	);
 }
