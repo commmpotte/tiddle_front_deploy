@@ -17,7 +17,7 @@ export function Slider({ className, ...props }: SliderProps) {
 			<Carousel
 				infiniteLoop={true}
 				showIndicators={false}
-				dynamicHeight={true}
+				dynamicHeight={false}
 				autoPlay={false}
 				emulateTouch={true}
 				showThumbs={false}
@@ -34,13 +34,23 @@ export function Slider({ className, ...props }: SliderProps) {
 			>
 				{sliders.map((slid) => (
 					<div key={slid.id} className={styles.items}>
-						<img
-							src={'/slider/' + slid.url}
-							alt={`Slide ${slid.id + 1}`}
-							className={classNames({
-								[styles.current]: currentIndex === slid.id
-							})}
-						/>
+						{currentIndex !== slid.id ? (
+							<img
+								src={'/slider/' + slid.url}
+								alt={`Slide ${slid.id + 1}`}
+								className={classNames({
+									[styles.current]: currentIndex === slid.id
+								})}
+							/>
+						) : (
+							<img
+								src={'/slider/' + slid.urlCurrent}
+								alt={`Slide ${slid.id + 1}`}
+								className={classNames({
+									[styles.current]: currentIndex === slid.id
+								})}
+							/>
+						)}
 					</div>
 				))}
 			</Carousel>
