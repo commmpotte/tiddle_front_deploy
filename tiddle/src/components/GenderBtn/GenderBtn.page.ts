@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, ButtonHTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
 export interface GenderBtnProps
 	extends DetailedHTMLProps<

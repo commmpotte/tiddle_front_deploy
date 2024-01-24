@@ -14,9 +14,7 @@ export async function AuthApi(dataLogin) {
 		return response;
 	} catch (error) {
 		if (isApiError(error)) {
-			throw new Error(
-				`${error.message}`
-			);
+			throw new Error(`${error.message}`);
 		}
 		throw error;
 	}

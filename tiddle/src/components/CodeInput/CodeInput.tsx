@@ -2,6 +2,7 @@
 import {
 	ChangeEvent,
 	KeyboardEvent,
+	ClipboardEvent,
 	RefObject,
 	useEffect,
 	useRef,
@@ -68,7 +69,7 @@ export function CodeInput({ callback }: { callback: (code: string) => void }) {
 		}
 	}
 
-	const handlePaste = (e) => {
+	const handlePaste = (e: ClipboardEvent<HTMLInputElement>) => {
 		const pastedCode = e.clipboardData.getData('text');
 		if (pastedCode.length === 6) {
 			setCode(pastedCode);
