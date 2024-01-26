@@ -20,9 +20,7 @@ export function CodeInput({ callback }: { callback: (code: string) => void }) {
 	];
 
 	useEffect(() => {
-		if (code.length === 5) {
-			if (typeof callback === 'function') callback(code);
-		}
+		callback(code);
 	}, [code]);
 
 	function handleInput(e: ChangeEvent<HTMLInputElement>, index: number) {

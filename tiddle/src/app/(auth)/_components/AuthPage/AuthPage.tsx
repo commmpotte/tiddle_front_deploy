@@ -2,6 +2,7 @@ import { Htag } from '@/components/Htag/Htag';
 import Link from 'next/link';
 import styles from './AuthPage.module.scss';
 import { AuthPageProps } from './AuthPage.props';
+import { paths } from '@/helps/path.help';
 
 export function AuthPage({
 	children,
@@ -37,7 +38,7 @@ export function AuthPage({
 				{type === 'login' && (
 					<div>
 						<span>Don’t have an account? </span>
-						<Link href="/signup" className={styles.link}>
+						<Link href={paths.auth.signup} className={styles.link}>
 							Sing up
 						</Link>
 					</div>
@@ -45,7 +46,7 @@ export function AuthPage({
 				{type === 'signup' && (
 					<div>
 						<span>Already with us? </span>
-						<Link href="/login" className={styles.link}>
+						<Link href={paths.auth.login} className={styles.link}>
 							Log in
 						</Link>
 					</div>
