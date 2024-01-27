@@ -1,0 +1,28 @@
+.title {
+	
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	column-gap: 20px;
+	align-items: center;
+	width: 100%;
+
+	.back {
+		border-radius: 40px;
+		display: inline-flex;
+		height: 37.895px;
+		padding: 7px 12px 6.895px 10px;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+	}
+
+	span {
+		white-space: nowrap;
+		text-align: center;
+		color: $text-color;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+	}
+}

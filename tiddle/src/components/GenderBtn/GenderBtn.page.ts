@@ -1,9 +1,12 @@
-import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
+import {
+	DetailedHTMLProps,
+	InputHTMLAttributes
+} from 'react';
 
 export interface GenderBtnProps
 	extends DetailedHTMLProps<
-		ButtonHTMLAttributes<HTMLButtonElement>,
-		HTMLButtonElement
+		InputHTMLAttributes<HTMLInputElement>,
+		HTMLInputElement
 	> {
 	gender: 'male' | 'female';
 }

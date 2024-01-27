@@ -7,3 +7,12 @@ export const codeInformation = {
 	urlIcon: '/icons/arrowLeft.svg',
 	backgroundUrl: '/codePartner/background.png'
 };
+
+export const editInformation = {
+	title: 'Create your profile',
+	urlIcon: '/icons/arrowLeft.svg',
+	nameLabel: 'Your name',
+	namePlaceholder: 'Erika Brown',
+	genderLabel: 'Your gender',
+	buttonText: 'Next'
+};

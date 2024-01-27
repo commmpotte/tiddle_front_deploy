@@ -2,13 +2,14 @@
 import { Button } from '@/components/Button/Button';
 import { CodeInput } from '@/components/CodeInput/CodeInput';
 import { Copy } from '@/components/Copy/Copy';
-import { codeInformation } from '@/helps/codePartnets.help';
+import { codeInformation } from '@/helps/text.help';
 import { paths } from '@/helps/path.help';
 import Link from 'next/link';
 import styles from './CodePartner.module.scss';
 import { useState } from 'react';
 import classNames from 'classnames';
 import { useRouter } from 'next/navigation';
+import { PathBack } from '@/components/PathBack/PathBack';
 
 export default function CodePartner() {
 	const [disableBtn, setDisableBtn] = useState<boolean>(false);
@@ -21,20 +22,12 @@ export default function CodePartner() {
 		} else setDisableBtn(false);
 		console.log(code);
 	};
-	const handleBack = () => {
-		router.back();
-	};
 	const handleNext = () => {
 		router.push('/profile/edit');
 	};
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.title}>
-				<Button className={styles.back} onClick={handleBack}>
-					<img src={codeInformation.urlIcon} alt="" />
-				</Button>
-				<span>{codeInformation.title}</span>
-			</div>
+			<PathBack url={codeInformation.urlIcon}>{codeInformation.title}</PathBack>
 			<div className={styles.code}>
 				<div className={styles.description}>{codeInformation.description}</div>
 				<Copy text={'AWEAWQ'} />

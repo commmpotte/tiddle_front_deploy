@@ -1,25 +1,26 @@
-.button {
-	border-radius: 20px;
+.button[type='radio'] {
+	display: none;
+}
+
+.button[type='radio'] + .gender {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 157px;
+	gap: 8px;
 	border: 1px solid $gender-border-color;
-	background: none;
 	color: $secondary-text;
+	font-feature-settings: 'clig' off, 'liga' off;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 20px; /* 125% */
 	letter-spacing: 0.2px;
-
-	padding: 18px 47px;
-
+	padding: 18px;
+	border-radius: 20px;
+	&:checked,
 	&:hover {
 		border-color: $border-checkbox-color;
-	}
-
-	.gender {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 8px;
 	}
 }
