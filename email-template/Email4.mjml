@@ -12,7 +12,7 @@
 	<mj-body background-color="#FFF">
 		<mj-wrapper padding="20px 20px 20px 20px">
 			<mj-hero
-				background-url="/static/left.png"
+				background-url="/static/email4.png"
 				background-width="570px"
 				mode="fluid-height"
 				background-height="469px"
