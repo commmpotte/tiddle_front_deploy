@@ -10,6 +10,7 @@ import { useState } from 'react';
 import classNames from 'classnames';
 import { useRouter } from 'next/navigation';
 import { PathBack } from '@/components/PathBack/PathBack';
+import TextMain from '@/components/TextMain/TextMain';
 
 export default function CodePartner() {
 	const [disableBtn, setDisableBtn] = useState<boolean>(false);
@@ -29,8 +30,10 @@ export default function CodePartner() {
 		<div className={styles.wrapper}>
 			<PathBack url={codeInformation.urlIcon}>{codeInformation.title}</PathBack>
 			<div className={styles.code}>
-				<div className={styles.description}>{codeInformation.description}</div>
-				<Copy text={'AWEAWQ'} />
+				<TextMain className={styles.description} type="text">
+					{codeInformation.description}
+				</TextMain>
+				<Copy text={'DAQEW'} />
 			</div>
 			<img src={codeInformation.backgroundUrl} alt="" />
 			<div className={styles.code}>

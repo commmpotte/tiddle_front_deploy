@@ -1,7 +1,6 @@
 .button {
 	border-radius: 20px;
 	border: none;
-	background: $active-color;
 	color: $white;
 	font-size: 20px;
 	font-weight: 400;
@@ -12,4 +11,20 @@
 	&:hover {
 		background: $button-hover-color;
 	}
+
+	&:focus {
+		background-color: $clicked-color;
+	}
+}
+.active {
+	background: $active-color;
+}
+
+.disabled {
+	background: $active-color;
+	opacity: 0.4;
+}
+
+.clicked {
+	background-color: $clicked-color;
 }

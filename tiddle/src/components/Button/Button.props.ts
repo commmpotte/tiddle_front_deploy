@@ -6,4 +6,5 @@ export interface ButtonProps
 		HTMLButtonElement
 	> {
 	children: ReactNode;
+	status?: 'active' | 'disabled';
 }

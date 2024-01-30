@@ -1,5 +1,5 @@
 import { Button } from '@/components/Button/Button';
-import { GenderBtn } from '@/components/GenderBtn/GenderBtn';
+import { IconBtn } from '@/components/IconBtn/IconBtn';
 import { Input } from '@/components/Input/Input';
 import { PathBack } from '@/components/PathBack/PathBack';
 import { Slider } from '@/components/Slider/Slider';
@@ -43,8 +43,8 @@ export function EditPage() {
 				<div className={styles.genderWrapper}>
 					<label className={styles.gender}>{editInformation.genderLabel}</label>
 					<div className={styles.maleAndFemale}>
-						<GenderBtn gender="male" {...register('gender')} />
-						<GenderBtn gender="female" {...register('gender')} />
+						<IconBtn icon="male" {...register('gender')} />
+						<IconBtn icon="female" {...register('gender')} />
 					</div>
 					<label className={styles.textDecoration}>
 						<input type="radio" {...register('gender')} value={'other'} />
