@@ -1,5 +1,4 @@
 .title {
-	
 	display: grid;
 	grid-template-columns: auto 1fr auto auto;
 	column-gap: 20px;
@@ -8,11 +7,9 @@
 
 	.back {
 		border-radius: 40px;
-		display: inline-flex;
+		@include flexbox(center, center, row);
 		height: 37.895px;
 		padding: 7px 12px 6.895px 10px;
-		justify-content: center;
-		align-items: center;
 		flex-shrink: 0;
 	}
 }

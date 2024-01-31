@@ -1,18 +1,11 @@
 .wrapper {
 	background-color: $background-color;
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
-	align-items: center;
-	justify-content: center;
+	@include flexbox(center, center, 40px);
 	padding: 46px 20px;
 
 	.form {
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
+		@include flexbox(center, center, 40px);
 		width: 100%;
-		justify-content: center;
 
 		.gender {
 			color: $text-color;
@@ -22,22 +15,22 @@
 			font-weight: 700;
 			line-height: 20px; /* 125% */
 			letter-spacing: 0.2px;
+			width: 100%;
 		}
 
 		.genderWrapper {
-			display: flex;
-			flex-direction: column;
+			@include flexbox($gap: 12px);
 			gap: 12px;
+			width: 100%;
 
 			.maleAndFemale {
-				display: flex;
-				flex-direction: row;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
 				gap: 20px;
 			}
 
 			.textDecoration {
 				color: $secondary-text;
-
 				font-feature-settings: 'case' on;
 				font-size: 12px;
 				font-style: normal;

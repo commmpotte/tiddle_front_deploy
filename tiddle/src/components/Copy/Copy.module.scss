@@ -1,7 +1,5 @@
 .wrapper {
-	display: flex;
-	gap: 4px;
-	align-items: center;
+	@include flexbox(center, center, 4px, row);
 	font-size: 28px;
 	font-style: normal;
 	font-weight: 500;

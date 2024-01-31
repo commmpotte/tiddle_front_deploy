@@ -1,20 +1,13 @@
 .welcomeScreen {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	@include flexbox(center, center, 20px);
 	width: 100%;
-	gap: 20px;
 	padding: 0 20px;
 
 	.description {
 		align-self: center;
 	}
 	.slider {
-		display: flex;
-		flex-direction: row;
-		gap: 5px;
-		align-items: center;
-		justify-content: center;
+		@include flexbox(center, center, 5px, row);
 		margin-bottom: 30px;
 	}
 }

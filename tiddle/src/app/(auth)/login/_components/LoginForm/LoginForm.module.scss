@@ -1,19 +1,14 @@
 .form {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	@include flexbox(flex-start, center, 20px);
 	width: 100%;
 
 	.wrapperRemember {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flexbox(space-between, center, 20px, row);
+		width: 100%;
 
 		.remember {
-			display: flex;
-			gap: 8px;
+			@include flexbox(flex-start, center, 8px, row);
 			font-size: 14px;
-			align-items: center;
 
 			input[type='checkbox'] {
 				appearance: none;

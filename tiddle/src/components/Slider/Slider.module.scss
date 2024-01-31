@@ -6,9 +6,7 @@
 
 	.slider div > ul > li {
 		opacity: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include flexbox(center, center, row);
 		transition: transform 0.3s;
 	}
 
