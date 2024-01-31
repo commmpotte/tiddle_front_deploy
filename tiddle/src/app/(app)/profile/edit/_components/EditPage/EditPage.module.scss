@@ -8,7 +8,13 @@
 		width: 100%;
 
 		.gender {
-			@include text-styles(16px, 20px, $text-color, $font-weight: 700, $text-align: left);
+			@include text-styles(
+				16px,
+				20px,
+				$text-color,
+				$font-weight: 700,
+				$text-align: left
+			);
 			font-feature-settings: 'clig' off, 'liga' off;
 			letter-spacing: 0.2px;
 		}
@@ -32,6 +38,27 @@
 					$text-align: left
 				);
 				font-feature-settings: 'case' on;
+
+				input {
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+
+					border-radius: 50%;
+					width: 24px;
+					height: 24px;
+
+					border: 2px solid $gender-border-color;
+					transition: 0.2s all linear;
+					margin-right: 5px;
+
+					position: relative;
+					top: 4px;
+					&:checked {
+						border: 7px solid $border-checkbox-color;
+						outline: unset !important; /* I added this one for Edge (chromium) support */
+					}
+				}
 			}
 		}
 	}

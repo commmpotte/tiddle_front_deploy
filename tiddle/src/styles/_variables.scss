@@ -1,10 +1,10 @@
+@import './mixins';
 $white: #ffffff;
 $primary-color: rgba(223, 206, 255, 0.2);
 $hover-color: rgba(191, 158, 255, 0.5);
 $clicked-color: #8b4fff;
 $active-color: #a87bff;
 $reject-color: #ff453a;
-@import './mixins';
 
 $resolve-color: #34c759;
 $primary-text-color: #000;
