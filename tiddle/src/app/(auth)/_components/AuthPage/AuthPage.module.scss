@@ -19,26 +19,16 @@
 	}
 	.wrapper {
 		@include flexbox(center, center, 27px);
+		@include text-styles(14px, normal, $secondary-text, $font-weight: 400);
 		width: 100%;
-		color: $secondary-text;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		text-transform: capitalize;
 		padding: 0 20px 30px 20px;
 		background: $white;
 		border-radius: 60px 60px 0px 0px;
 		z-index: 100;
 
 		.link {
+			@include text-styles(14px, normal,  $active-color, $font-weight: 400);
 			text-decoration: none;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-			text-transform: capitalize;
-			color: $active-color;
 		}
 
 		.mainLogo {

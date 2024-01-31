@@ -1,10 +1,6 @@
 .wrapper {
 	@include flexbox(center, center, 4px, row);
-	font-size: 28px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 32px;
-	color: $text-color;
+	@include text-styles(28px, 32px, $text-color, $font-weight: 500);
 
 	.btn {
 		border: none;

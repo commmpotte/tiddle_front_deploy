@@ -55,7 +55,7 @@ export function EditPage() {
 						I’d rather do not answer
 					</label>
 				</div>
-				<Button>{editInformation.buttonText}</Button>
+				<Button className={styles.nextBtn}>{editInformation.buttonText}</Button>
 			</form>
 		</div>
 	);

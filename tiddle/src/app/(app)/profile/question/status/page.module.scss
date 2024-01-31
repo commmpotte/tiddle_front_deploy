@@ -31,17 +31,10 @@
 		@include flexbox(center, center, 12px);
 		width: 100%;
 
-		.Btn {
-			width: 100%;
-		}
 
 		.link {
-			font-size: 12px;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 16px;
+			@include text-styles(12px, 16px, $secondary-text, $font-weight: 500);
 			text-decoration: none;
-			color: $secondary-text;
 		}
 	}
 }

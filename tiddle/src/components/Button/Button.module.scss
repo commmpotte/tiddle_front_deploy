@@ -1,12 +1,10 @@
 .button {
+	@include text-styles(20px, 28px,  $white, $font-weight: 400);
 	border-radius: 20px;
 	border: none;
-	color: $white;
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 28px;
 	letter-spacing: 0.2px;
 	padding: 12px 36px;
+	width: 100%;
 
 	&:hover {
 		background: $button-hover-color;

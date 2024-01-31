@@ -8,19 +8,13 @@
 		width: 100%;
 
 		.gender {
-			color: $text-color;
+			@include text-styles(16px, 20px, $text-color, $font-weight: 700, $text-align: left);
 			font-feature-settings: 'clig' off, 'liga' off;
-			font-size: 16px;
-			font-style: normal;
-			font-weight: 700;
-			line-height: 20px; /* 125% */
 			letter-spacing: 0.2px;
-			width: 100%;
 		}
 
 		.genderWrapper {
 			@include flexbox($gap: 12px);
-			gap: 12px;
 			width: 100%;
 
 			.maleAndFemale {
@@ -30,13 +24,19 @@
 			}
 
 			.textDecoration {
-				color: $secondary-text;
+				@include text-styles(
+					12px,
+					16px,
+					$secondary-text,
+					$font-weight: 500,
+					$text-align: left
+				);
 				font-feature-settings: 'case' on;
-				font-size: 12px;
-				font-style: normal;
-				font-weight: 500;
-				line-height: 16px;
 			}
 		}
+	}
+
+	.nextBtn {
+		margin-top: 40px;
 	}
 }

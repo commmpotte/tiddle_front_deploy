@@ -1,22 +1,10 @@
 .title {
+	@include text-styles(16px, 20px, $text-color, $font-weight: 400);
 	margin: 0;
 	white-space: nowrap;
 	text-align: center;
-	color: $text-color;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px;
 }
 
 .text {
-	color: $secondary-text;
-
-	text-align: center;
-	/* main text mobile */
-	font-family: 'SF Pro Display';
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px;
+	@include text-styles(16px, 20px, $secondary-text, $font-weight: 400);
 }

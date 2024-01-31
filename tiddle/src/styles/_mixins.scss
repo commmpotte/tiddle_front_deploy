@@ -10,3 +10,19 @@
 	align-items: $align-items;
 	gap: $gap;
 }
+
+@mixin text-styles(
+	$font-size,
+	$line-height,
+	$color,
+	$font-family: 'SF Pro Display',
+	$font-weight: normal,
+	$text-align: center
+) {
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $color;
+	font-family: $font-family;
+	font-weight: $font-weight;
+	text-align: $text-align;
+}

@@ -8,7 +8,7 @@
 
 		.remember {
 			@include flexbox(flex-start, center, 8px, row);
-			font-size: 14px;
+			@include text-styles(14px, normal,  $secondary-text, $font-weight: 400);
 
 			input[type='checkbox'] {
 				appearance: none;
@@ -27,13 +27,8 @@
 			}
 		}
 		.link {
+			@include text-styles(14px, normal,  $active-color, $font-weight: 400);
 			text-decoration: none;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-			text-transform: capitalize;
-			color: $active-color;
 		}
 	}
 }
