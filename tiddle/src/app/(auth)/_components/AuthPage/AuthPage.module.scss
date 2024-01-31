@@ -27,7 +27,7 @@
 		z-index: 100;
 
 		.link {
-			@include text-styles(14px, normal,  $active-color, $font-weight: 400);
+			@include text-styles(14px, normal, $active-color, $font-weight: 400);
 			text-decoration: none;
 		}
 
@@ -35,14 +35,14 @@
 			display: none;
 		}
 
-		@media (min-width: 900px) {
+		@include desktop {
 			.mainLogo {
 				display: block;
 			}
 		}
 	}
 
-	@media (min-width: 900px) {
+	@include desktop {
 		background: transparent;
 		.mobileLogo {
 			display: none;

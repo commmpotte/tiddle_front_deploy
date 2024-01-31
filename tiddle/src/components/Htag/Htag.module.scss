@@ -1,9 +1,21 @@
 .h1 {
-	@include text-styles(34px, 80%, $text-color, $font-family: 'eurofurence', $font-weight: 400);
+	@include text-styles(
+		34px,
+		80%,
+		$text-color,
+		$font-family: 'eurofurence',
+		$font-weight: 400
+	);
 	margin: 0;
 	margin-top: 81px;
-	@media (min-width: 900) {
-		@include text-styles(48px, 80%, $text-color, $font-family: 'eurofurence', $font-weight: 500);
+	@include desktop {
+		@include text-styles(
+			48px,
+			80%,
+			$text-color,
+			$font-family: 'eurofurence',
+			$font-weight: 500
+		);
 	}
 }
 

@@ -15,26 +15,25 @@
 			$font-weight: 500,
 			$text-align: left
 		);
+		@include rounded-border(20px, 2px, solid, $primary-color);
 		width: 100%;
-		border-radius: 20px;
-		border: 2px solid $primary-color;
 		background: #fff;
 		padding: 20px;
 
 		&:hover {
-			border: 2px solid $hover-color;
+			@include rounded-border(0, 2px, solid, $hover-color);
 		}
 		&:focus {
 			outline: none;
-			border: 2px solid $active-color;
+			@include rounded-border(0, 2px, solid, $active-color);
 		}
 	}
 
 	.error {
-		border: 2px solid $reject-color;
+		@include rounded-border(0, 2px, solid, $reject-color);
 	}
 
-	@media (min-width: 900px) {
+	@include desktop {
 		.label {
 			@include text-styles(22px, 22px, $secondary-text, $font-weight: 400);
 		}

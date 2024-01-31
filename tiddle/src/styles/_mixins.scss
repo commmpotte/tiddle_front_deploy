@@ -26,3 +26,19 @@
 	font-weight: $font-weight;
 	text-align: $text-align;
 }
+
+@mixin rounded-border($radius, $width, $style, $color) {
+	border-radius: $radius;
+	border: $width $style $color;
+}
+
+@mixin desktop {
+	@media screen and (max-width: 900px) {
+		@content;
+	}
+}
+
+@mixin box($width, $height: $width) {
+	width: $width;
+	height: $height;
+}

@@ -3,7 +3,7 @@
 		display: none;
 	}
 
-	@media (min-width: 900px) {
+	@include desktop {
 		display: grid;
 		grid-template-columns: auto 1fr 1fr;
 

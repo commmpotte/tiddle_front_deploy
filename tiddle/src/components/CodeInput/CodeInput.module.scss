@@ -4,15 +4,13 @@
 
 	.input {
 		@include text-styles(16px, 20px, $text-color, $font-weight: 400);
-		border-radius: 4px;
-		border: 1px solid $border-checkbox-color;
-		width: 34px;
-		height: 44px;
+		@include box(34px, 44px);
+		@include rounded-border(4px, 1px, solid, $border-checkbox-color);
 
 		&:focus, &:hover {
 			outline: 0;
-			box-shadow: 0px 0px 5px $border-checkbox-color; /*here change the color*/
-			border: 1px solid $border-checkbox-color; /*here change the color*/
+			box-shadow: 0px 0px 5px $border-checkbox-color; 
+			border: 1px solid $border-checkbox-color; 
 		}
 	}
 }
