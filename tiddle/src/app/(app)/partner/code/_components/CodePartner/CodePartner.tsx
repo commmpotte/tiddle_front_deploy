@@ -4,13 +4,13 @@ import { CodeInput } from '@/components/CodeInput/CodeInput';
 import { Copy } from '@/components/Copy/Copy';
 import { codeInformation } from '@/helps/text.help';
 import { paths } from '@/helps/path.help';
-import Link from 'next/link';
 import styles from './CodePartner.module.scss';
 import { useState } from 'react';
 import classNames from 'classnames';
 import { useRouter } from 'next/navigation';
 import { PathBack } from '@/components/PathBack/PathBack';
 import TextMain from '@/components/TextMain/TextMain';
+import { Skip } from '@/components/Skip/Skip';
 
 export default function CodePartner() {
 	const [disableBtn, setDisableBtn] = useState<boolean>(false);
@@ -49,9 +49,7 @@ export default function CodePartner() {
 				>
 					{codeInformation.buttonText}
 				</Button>
-				<Link href={paths.app.skip} className={styles.link}>
-					Skip for now
-				</Link>
+				<Skip href={paths.app.skip}>Skip for now</Skip>
 			</div>
 		</div>
 	);

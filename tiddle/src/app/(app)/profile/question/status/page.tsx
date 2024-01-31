@@ -9,6 +9,7 @@ import styles from './page.module.scss';
 import { questionStatus } from '@/helps/questionStatus.help';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { Skip } from '@/components/Skip/Skip';
 
 type Inputs = {
 	relationship: string;
@@ -69,9 +70,7 @@ export default function StatusPage() {
 					>
 						{questionStatus[questionProgress].btnName}
 					</Button>
-					<Link href={paths.app.skip} className={styles.link}>
-						Skip for now
-					</Link>
+					<Skip href={paths.app.skip}>Skip for now</Skip>
 				</div>
 			</form>
 		</div>
