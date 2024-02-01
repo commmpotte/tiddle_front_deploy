@@ -17,6 +17,7 @@ export function LoginForm() {
 	const {
 		register,
 		handleSubmit,
+		setError,
 		formState: { errors }
 	} = useForm<Inputs>();
 	const router = useRouter();
@@ -30,6 +31,8 @@ export function LoginForm() {
 			router.push('/');
 		} else if (result?.error) {
 			toast.error(result?.error);
+			setError('username', { type: 'error', message: result.error });
+			setError('password', { type: 'error', message: result.error });
 		}
 	};
 	return (

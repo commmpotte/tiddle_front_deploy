@@ -6,9 +6,11 @@ import styles from './SignUpForm.module.scss';
 import { useForm } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import { createUser } from '@/api/createUser.api';
+import toast from 'react-hot-toast';
 
 type Inputs = {
-	identifier: string;
+	username: string;
 	password: string;
 	repeatPassword: string;
 };
@@ -16,21 +18,44 @@ export function SignUpForm() {
 	const {
 		register,
 		handleSubmit,
+		reset,
+		setError,
 		formState: { errors }
 	} = useForm<Inputs>();
 	const router = useRouter();
+
 	const onSubmit = async (data: Inputs) => {
-		const result = await signIn('credentials', data);
-		if (result && !result.error) {
-			router.push('/');
+		if (data.repeatPassword !== data.password) {
+			setError('password', { message: "Passwords don't match" });
+			setError('repeatPassword', { message: "Passwords don't match" });
+			reset();
 		} else {
-			console.log(result);
+			const dataNewUser = await createUser({
+				username: data.username,
+				password: data.password
+			});
+			console.log(dataNewUser);
+			if (dataNewUser && !dataNewUser.error) {
+				const result = await signIn('credentials', {
+					username: data.username,
+					password: data.password,
+					redirect: false
+				});
+
+				if (result && !result.error) {
+					router.push('/');
+				} else if (result?.error) {
+					toast.error(result?.error);
+				}
+			} else if (dataNewUser?.error) {
+				toast.error(dataNewUser?.error.message);
+			}
 		}
 	};
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 			<Input
-				{...register('identifier', {
+				{...register('username', {
 					required: {
 						value: true,
 						message: 'Enter your email address'
@@ -38,15 +63,17 @@ export function SignUpForm() {
 				})}
 				placeholder="example@example.com"
 				label="Email"
-				error={errors.identifier}
+				error={errors.username}
 			/>
 			<Input
 				{...register('password', {
 					required: {
 						value: true,
-						message: 'Enter your email address'
-					}
+						message: 'Enter your password address'
+					},
+					minLength: 8
 				})}
+				type="password"
 				placeholder="********"
 				label="Password"
 				error={errors.password}
@@ -55,9 +82,11 @@ export function SignUpForm() {
 				{...register('repeatPassword', {
 					required: {
 						value: true,
-						message: 'Enter your email address'
-					}
+						message: 'Enter your repeat password address'
+					},
+					minLength: 8
 				})}
+				type="password"
 				placeholder="********"
 				label="Repeat password"
 				error={errors.password}
