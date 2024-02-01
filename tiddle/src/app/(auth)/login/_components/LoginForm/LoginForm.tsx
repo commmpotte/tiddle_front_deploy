@@ -7,9 +7,10 @@ import styles from './LoginForm.module.scss';
 import { useForm } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 type Inputs = {
-	identifier: string;
+	username: string;
 	password: string;
 };
 export function LoginForm() {
@@ -20,17 +21,23 @@ export function LoginForm() {
 	} = useForm<Inputs>();
 	const router = useRouter();
 	const onSubmit = async (data: Inputs) => {
-		const result = await signIn('credentials', data);
+		const result = await signIn('credentials', {
+			username: data.username,
+			password: data.password,
+			redirect: false
+		});
+		console.log(result);
 		if (result && !result.error) {
 			router.push('/');
-		} else {
+		} else if (result?.error) {
+			toast.error(result?.error);
 			console.log(result);
 		}
 	};
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 			<Input
-				{...register('identifier', {
+				{...register('username', {
 					required: {
 						value: true,
 						message: 'Enter your email address'
@@ -38,7 +45,7 @@ export function LoginForm() {
 				})}
 				placeholder="example@example.com"
 				label="Email"
-				error={errors.identifier}
+				error={errors.username}
 			/>
 			<Input
 				{...register('password', {
