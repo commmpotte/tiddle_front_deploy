@@ -19,7 +19,7 @@ const authMaxAge = 15;
 async function refreshAccessToken(token: JwtToken) {
 	try {
 		const response = await fetch(
-			process.env.DJANGO_HOST + pathAPI.auth.refresh,
+			process.env.NEXT_PUBLIC_DJANGO_HOST + pathAPI.auth.refresh,
 			{
 				method: 'POST',
 				body: JSON.stringify({

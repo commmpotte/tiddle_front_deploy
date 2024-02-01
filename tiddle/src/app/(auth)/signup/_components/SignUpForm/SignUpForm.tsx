@@ -8,6 +8,7 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { createUser } from '@/api/createUser.api';
 import toast from 'react-hot-toast';
+import { paths } from '@/helps/path.help';
 
 type Inputs = {
 	username: string;
@@ -43,7 +44,7 @@ export function SignUpForm() {
 				});
 
 				if (result && !result.error) {
-					router.push('/');
+					router.push(paths.app.edit);
 				} else if (result?.error) {
 					toast.error(result?.error);
 				}

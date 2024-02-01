@@ -3,5 +3,10 @@ export const pathAPI = {
 		login: '/token/',
 		refresh: '/token/refresh/',
 		createUser: '/tiddleusers/'
+	},
+	app: { 
+		profile: { 
+			edit: /tiddleusers/
+		}
 	}
 };
