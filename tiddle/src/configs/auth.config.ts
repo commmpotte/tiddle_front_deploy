@@ -14,6 +14,8 @@ type TokenJwtType = {
 	exp: number;
 	jti: string;
 };
+
+const authMaxAge = 15;
 async function refreshAccessToken(token: JwtToken) {
 	try {
 		const response = await fetch(
@@ -37,7 +39,9 @@ async function refreshAccessToken(token: JwtToken) {
 		return {
 			...token,
 			access: refreshedTokens.access,
-			accessTokenExpires: currentDate.setMinutes(currentDate.getMinutes() + 1),
+			accessTokenExpires: currentDate.setMinutes(
+				currentDate.getMinutes() + authMaxAge
+			),
 			refresh: refreshedTokens.refresh ?? token.refresh
 		};
 	} catch (error) {
@@ -60,15 +64,17 @@ export const authConfig: AuthOptions = {
 					if (!credentials?.username || !credentials?.password) {
 						return null;
 					}
-					const currentUser = await AuthApi<JwtToken>({
+					const currentUser = await AuthApi({
 						username: credentials.username,
 						password: credentials.password
 					});
 					if (currentUser.error) {
 						throw new Error(currentUser.error.message);
 					}
-					console.log(currentUser);
-					return currentUser as User;
+					return {
+						access: currentUser.access,
+						refresh: currentUser.refresh
+					} as User;
 				} catch (error) {
 					if (isApiError(error)) {
 						throw new Error(`${error.message}`);
@@ -86,13 +92,12 @@ export const authConfig: AuthOptions = {
 	},
 	callbacks: {
 		async jwt({ token, user, account }) {
-			console.log(token);
 			if (account && user) {
 				const currentDate = new Date();
 				return {
 					access: user.access,
 					accessTokenExpires: currentDate.setMinutes(
-						currentDate.getMinutes() + 1
+						currentDate.getMinutes() + authMaxAge
 					),
 					refresh: user.refresh
 				};

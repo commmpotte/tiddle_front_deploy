@@ -26,12 +26,10 @@ export function LoginForm() {
 			password: data.password,
 			redirect: false
 		});
-		console.log(result);
 		if (result && !result.error) {
 			router.push('/');
 		} else if (result?.error) {
 			toast.error(result?.error);
-			console.log(result);
 		}
 	};
 	return (
@@ -51,7 +49,7 @@ export function LoginForm() {
 				{...register('password', {
 					required: {
 						value: true,
-						message: 'Enter your email address'
+						message: 'Enter your password address'
 					}
 				})}
 				placeholder="********"
