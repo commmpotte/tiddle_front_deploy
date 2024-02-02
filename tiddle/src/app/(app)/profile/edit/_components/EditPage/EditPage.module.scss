@@ -1,0 +1,65 @@
+.wrapper {
+	background-color: $background-color;
+	@include flexbox(center, center, 40px);
+	padding: 46px 20px;
+
+	.form {
+		@include flexbox(center, center, 40px);
+		width: 100%;
+
+		.gender {
+			@include text-styles(
+				16px,
+				20px,
+				$text-color,
+				$font-weight: 700,
+				$text-align: left
+			);
+			font-feature-settings: 'clig' off, 'liga' off;
+			letter-spacing: 0.2px;
+		}
+
+		.genderWrapper {
+			@include flexbox($gap: 12px);
+			width: 100%;
+
+			.maleAndFemale {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 20px;
+			}
+
+			.textDecoration {
+				@include text-styles(
+					12px,
+					16px,
+					$secondary-text,
+					$font-weight: 500,
+					$text-align: left
+				);
+				font-feature-settings: 'case' on;
+
+				input {
+					@include box(24px, 24px);
+					@include rounded-border(50%, 2px, solid, $gender-border-color);
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+
+					transition: 0.2s all linear;
+					margin-right: 5px;
+					position: relative;
+					top: 4px;
+					&:checked {
+						border: 7px solid $border-checkbox-color;
+						outline: unset !important; /* I added this one for Edge (chromium) support */
+					}
+				}
+			}
+		}
+	}
+
+	.nextBtn {
+		margin-top: 40px;
+	}
+}

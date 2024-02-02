@@ -1,0 +1,38 @@
+.wrapper {
+	box-sizing: border-box;
+	@include flexbox(center, center, 12px);
+	padding: 38px 20px;
+	width: 100%;
+
+	.code {
+		@include flexbox(flex-start, center, 12px);
+	}
+	.description {
+		width: 100%;
+		color: $text-color;
+	}
+
+	.btnWrapper {
+		@include flexbox(flex-start, center, 16px);
+		width: 100%;
+	}
+
+	.nextBtn {
+		margin-top: 40px;
+		opacity: 0.4;
+		background: #a87bff;
+		pointer-events: none;
+		cursor: default;
+	}
+
+	.enabled {
+		background: #a87bff;
+		opacity: 1;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.link {
+		@include text-styles(12px, 16px, $secondary-text, $font-weight: 500);
+		text-decoration: none;
+	}
+}

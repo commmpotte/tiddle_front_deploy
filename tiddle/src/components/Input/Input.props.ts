@@ -8,5 +8,4 @@ export interface InputProps
 	> {
 	error?: FieldError;
 	label?: string;
-	eyeoff?: boolean;
 }

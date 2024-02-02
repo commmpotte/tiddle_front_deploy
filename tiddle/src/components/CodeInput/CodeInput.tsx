@@ -20,9 +20,7 @@ export function CodeInput({ callback }: { callback: (code: string) => void }) {
 	];
 
 	useEffect(() => {
-		if (code.length === 5) {
-			if (typeof callback === 'function') callback(code);
-		}
+		callback(code);
 	}, [code]);
 
 	function handleInput(e: ChangeEvent<HTMLInputElement>, index: number) {
@@ -71,7 +69,7 @@ export function CodeInput({ callback }: { callback: (code: string) => void }) {
 
 	const handlePaste = (e: ClipboardEvent<HTMLInputElement>) => {
 		const pastedCode = e.clipboardData.getData('text');
-		if (pastedCode.length === 6) {
+		if (pastedCode.length === 5) {
 			setCode(pastedCode);
 			inputRefs.forEach((inputRef, index) => {
 				if (inputRef.current) inputRef.current.value = pastedCode.charAt(index);

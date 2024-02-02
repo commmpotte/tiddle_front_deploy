@@ -1,3 +1,4 @@
+'use client';
 import { CopyProps } from './Copy.props';
 import styles from './Copy.module.scss';
 

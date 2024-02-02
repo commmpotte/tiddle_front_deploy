@@ -1,6 +1,11 @@
 @import '@/styles/variables';
 
-
-body { 
+body {
+	font-family: 'SF Pro Display';
+	background: $background-color;
 	margin: 0 auto;
+}
+
+* {
+	font-family: 'SF Pro Display';
 }

@@ -1,0 +1,17 @@
+.button[type='radio'] {
+	display: none;
+}
+
+.button[type='radio'] + .gender {
+	@include flexbox(center, center, 8px);
+	@include text-styles(16px, 20px, $secondary-text, $font-weight: 500);
+	border: 1px solid $gender-border-color;
+	font-feature-settings: 'clig' off, 'liga' off;
+	letter-spacing: 0.2px;
+	padding: 18px;
+	border-radius: 20px;
+	&:checked,
+	&:hover {
+		border-color: $border-checkbox-color;
+	}
+}

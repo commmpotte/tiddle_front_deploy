@@ -11,7 +11,14 @@
 	</mj-head>
 	<mj-body background-color="#FFF">
 		<mj-wrapper padding="20px 20px 20px 20px">
-			<mj-hero background-color="#8B4FFF">
+			<mj-hero
+				background-url="/static/invated.png"
+				background-width="570px"
+
+				mode="fixed-height"
+				height="473px"
+				background-height="473px"
+			>
 				<mj-text
 					font-size="70px"
 					font-family="SFPro"
@@ -31,15 +38,6 @@
 					>User Name, you were invited <br />
 					to Tiddle</mj-text
 				>
-			</mj-hero>
-			<mj-hero
-				background-url="/static/email5.png"
-				background-width="570px"
-				background-color="#8B4FFF"
-				mode="fixed-height"
-				height="473px"
-				background-height="473px"
-			>
 			</mj-hero>
 
 			<mj-section>

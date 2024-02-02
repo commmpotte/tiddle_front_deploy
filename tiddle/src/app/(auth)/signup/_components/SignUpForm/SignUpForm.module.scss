@@ -1,22 +1,13 @@
 .form {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	@include flexbox(flex-start, center, 20px);
 	width: 100%;
 
 	.wrapperRemember {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flexbox(space-between, center, row);
 
 		.link {
+			@include text-styles(14px, normal, $active-color, $font-weight: 400);
 			text-decoration: none;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-			text-transform: capitalize;
-			color: $active-color;
 		}
 	}
 }

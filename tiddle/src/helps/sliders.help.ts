@@ -26,7 +26,7 @@ export const sliders = [
 		urlCurrent: 'avatar6big.png'
 	},
 	{
-		id: 7,
+		id: 6,
 		url: 'avatar8.png',
 		urlCurrent: 'avatar8big.png'
 	}

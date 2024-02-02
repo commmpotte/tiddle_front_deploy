@@ -1,9 +1,9 @@
 import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
-export interface GenderBtnProps
+export interface ArrowBtnProps
 	extends DetailedHTMLProps<
 		ButtonHTMLAttributes<HTMLButtonElement>,
 		HTMLButtonElement
 	> {
-	gender: 'male' | 'female';
+	arrow: 'arrowLeft' | 'close';
 }

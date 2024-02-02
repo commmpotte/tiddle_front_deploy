@@ -1,29 +1,22 @@
 .form {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	@include flexbox(flex-start, center, 20px);
 	width: 100%;
 
 	.wrapperRemember {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flexbox(space-between, center, 20px, row);
+		width: 100%;
 
 		.remember {
-			display: flex;
-			gap: 8px;
-			font-size: 14px;
-			align-items: center;
+			@include flexbox(flex-start, center, 8px, row);
+			@include text-styles(14px, normal, $secondary-text, $font-weight: 400);
 
 			input[type='checkbox'] {
+				@include box(20px, 20px);
+				@include rounded-border(4px, 2px, solid, $border-checkbox-color);
 				appearance: none;
 				-webkit-appearance: none;
 				-moz-appearance: none;
-				width: 20px;
-				height: 20px;
-				border-radius: 4px;
 				outline: none;
-				border: 2px solid $border-checkbox-color;
 			}
 
 			input[type='checkbox']:checked {
@@ -32,13 +25,8 @@
 			}
 		}
 		.link {
+			@include text-styles(14px, normal, $active-color, $font-weight: 400);
 			text-decoration: none;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-			text-transform: capitalize;
-			color: $active-color;
 		}
 	}
 }

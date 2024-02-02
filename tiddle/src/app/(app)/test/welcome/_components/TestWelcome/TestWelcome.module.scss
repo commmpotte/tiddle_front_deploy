@@ -1,0 +1,60 @@
+.wrapper {
+	@include flexbox(space-between, center, 40px);
+	background-color: $background-color;
+	padding: 32px 20px;
+	height: 100vh;
+
+	.mainWrapper {
+		@include flexbox(center, center, 32px);
+	}
+
+	.linkSymbol {
+		border-radius: 80px;
+		box-shadow: 0 4px 29px 5px rgba(200, 185, 230, 0.15);
+		background: $white;
+		padding: 43px;
+	}
+	.btnDialog {
+		background: none;
+		border: none;
+		@include text-styles(16px, 125%, $active-color, $font-weight: 400);
+	}
+}
+
+.open {
+	background: rgba(0, 0, 0, 0.2);
+
+	.linkSymbol {
+		opacity: 0.1;
+	}
+}
+.main {
+	position: relative;
+}
+.dialogWrapper {
+	@include box(100%, 100vh);
+	border-radius: 60px 60px 0 0;
+	top: 200px;
+	background-color: $white;
+	position: absolute;
+
+	.dialogPanel {
+		@include flexbox(left, left, 20px);
+		padding: 28px 20px;
+	}
+
+	.closeBtn {
+		align-self: self-end;
+	}
+
+	.iconsText {
+		@include flexbox(flex-start, center, 0px, row);
+		text-align: left;
+		img {
+			margin-right: 8px;
+		}
+	}
+	.text {
+		text-align: left;
+	}
+}

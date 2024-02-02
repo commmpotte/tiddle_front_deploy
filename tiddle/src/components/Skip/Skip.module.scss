@@ -1,0 +1,4 @@
+.link {
+	@include text-styles(12px, 16px, $secondary-text, $font-weight: 500);
+	text-decoration: none;
+}

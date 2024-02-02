@@ -1,46 +1,41 @@
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
+	@include flexbox(flex-start, flex-start, 12px);
+	width: 100%;
 
 	.label {
-		color: $text-color;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 20px; /* 125% */
+		@include text-styles(16px, 20px, $text-color, $font-weight: 700);
 		letter-spacing: 0.2px;
+		font-feature-settings: 'clig' off, 'liga' off;
 	}
 	.input {
-		border-radius: 20px;
-		border: 2px solid $primary-color;
+		@include text-styles(
+			22px,
+			22px,
+			$primary-text-color,
+			$font-weight: 500,
+			$text-align: left
+		);
+		@include rounded-border(20px, 2px, solid, $primary-color);
+		width: 100%;
 		background: #fff;
 		padding: 20px;
-		color: $primary-text-color;
-		font-size: 22px;
-		font-weight: 500;
-		line-height: 22px;
 
 		&:hover {
-			border: 2px solid $hover-color;
+			@include rounded-border(20px, 2px, solid, $hover-color);
 		}
 		&:focus {
 			outline: none;
-			border: 2px solid $active-color;
+			@include rounded-border(20px, 2px, solid, $active-color);
 		}
 	}
 
 	.error {
-		border: 2px solid $reject-color;
+		@include rounded-border(20px, 2px, solid, $reject-color);
 	}
 
-	@media (min-width: 900px) {
+	@include desktop {
 		.label {
-			color: $secondary-text;
-			font-size: 22px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 22px;
+			@include text-styles(22px, 22px, $secondary-text, $font-weight: 400);
 		}
 	}
 }

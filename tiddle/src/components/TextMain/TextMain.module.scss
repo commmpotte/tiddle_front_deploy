@@ -1,0 +1,10 @@
+.title {
+	@include text-styles(16px, 20px, $text-color, $font-weight: 400);
+	margin: 0;
+	//white-space: nowrap;
+	text-align: center;
+}
+
+.text {
+	@include text-styles(16px, 20px, $secondary-text, $font-weight: 400);
+}
