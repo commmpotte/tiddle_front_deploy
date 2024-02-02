@@ -21,16 +21,16 @@
 		padding: 20px;
 
 		&:hover {
-			@include rounded-border(0, 2px, solid, $hover-color);
+			@include rounded-border(20px, 2px, solid, $hover-color);
 		}
 		&:focus {
 			outline: none;
-			@include rounded-border(0, 2px, solid, $active-color);
+			@include rounded-border(20px, 2px, solid, $active-color);
 		}
 	}
 
 	.error {
-		@include rounded-border(0, 2px, solid, $reject-color);
+		@include rounded-border(20px, 2px, solid, $reject-color);
 	}
 
 	@include desktop {

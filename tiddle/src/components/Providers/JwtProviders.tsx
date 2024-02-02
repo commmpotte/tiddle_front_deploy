@@ -1,15 +1,14 @@
 'use client';
-import { signIn, useSession } from 'next-auth/react';
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 
 export const JwtProviders = ({ children }: { children: ReactNode }) => {
-	const session = useSession();
-
-	useEffect(() => {
-		if (session?.error === 'RefreshAccessTokenError') {
-			signIn(); // Force sign in to hopefully resolve error
-		}
-	}, [session]);
+	// const session = useSession();
+	// useEffect(() => {
+	// 	// if (session?.data.error)
+	// 		if (session?.data.error === 'RefreshAccessTokenError') {
+	// 			signIn(); // Force sign in to hopefully resolve error
+	// 		}
+	// }, [session]);
 
 	return <>{children}</>;
 };

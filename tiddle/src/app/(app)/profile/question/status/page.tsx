@@ -4,7 +4,6 @@ import { Htag } from '@/components/Htag/Htag';
 import { IconBtn } from '@/components/IconBtn/IconBtn';
 import TextMain from '@/components/TextMain/TextMain';
 import { paths } from '@/helps/path.help';
-import Link from 'next/link';
 import styles from './page.module.scss';
 import { questionStatus } from '@/helps/questionStatus.help';
 import { useState } from 'react';
@@ -22,7 +21,6 @@ export default function StatusPage() {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors }
 	} = useForm<Inputs>();
 	const onSubmit = async (data: Inputs) => {
 		if (questionProgress < 2) {
