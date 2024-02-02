@@ -35,3 +35,8 @@ export const welcomeInformation: welcomeInfo[] = [
 		type: 'login'
 	}
 ];
+
+export const welcomeQuestionText = {
+	title: 'Attachment Style Test',
+	text: 'Take the 5 minute attachment style quiz to explore how childhood conditioning manifests in your adult relationships'
+};

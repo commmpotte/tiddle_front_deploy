@@ -26,7 +26,7 @@ export function EditPage() {
 	};
 	return (
 		<div className={styles.wrapper}>
-			<PathBack url={editInformation.urlIcon}>{editInformation.title}</PathBack>
+			<PathBack>{editInformation.title}</PathBack>
 			<Slider currentId={setCurrentId} />
 			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 				<Input

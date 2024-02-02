@@ -28,7 +28,7 @@ export default function CodePartner() {
 	};
 	return (
 		<div className={styles.wrapper}>
-			<PathBack url={codeInformation.urlIcon}>{codeInformation.title}</PathBack>
+			<PathBack>{codeInformation.title}</PathBack>
 			<div className={styles.code}>
 				<TextMain className={styles.description} type="text">
 					{codeInformation.description}

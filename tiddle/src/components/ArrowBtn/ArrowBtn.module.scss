@@ -1,0 +1,6 @@
+.button {
+	@include box(40px, 40px);
+	border-radius: 50%;
+	border: none;
+	background-color: $active-color;
+}

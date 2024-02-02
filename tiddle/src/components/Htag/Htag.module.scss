@@ -20,7 +20,7 @@
 }
 
 .h2 {
-	@include text-styles(20px, 32px, $text-color, $font-weight: 500);
+	@include text-styles(28px, 32px, $text-color, $font-weight: 500);
 	margin: 0;
 	margin-top: 20px;
 }
