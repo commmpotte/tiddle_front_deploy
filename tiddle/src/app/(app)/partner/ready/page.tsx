@@ -19,6 +19,7 @@ export default function ReadyPage() {
 				<Swipezor
 					overlayText="Connect"
 					mainText=""
+					delta={10}
 					caretClassList={styles.swiperCaret}
 					classList={styles.swiper}
 					overlayClassList={styles.overlayWripper}
