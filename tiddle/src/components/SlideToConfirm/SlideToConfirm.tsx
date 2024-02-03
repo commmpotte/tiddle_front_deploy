@@ -55,6 +55,7 @@ export function SlideToConfirm({ label, onConfirm }: Props) {
 			<motion.div
 				className={styles.toggle}
 				initial={{ width: START_POSITION }}
+				transition={{ ease: 'linear', duration: 0.2 }}
 				animate={{ width: widthX }}
 				onPan={handleTouchStart}
 				onPanEnd={handleTouchEnd}
