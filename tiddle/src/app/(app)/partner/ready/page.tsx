@@ -3,6 +3,7 @@ import Swipezor from 'react-swipezor';
 import styles from './page.module.scss';
 import { useState } from 'react';
 import { Button } from '@/components/Button/Button';
+import { SlideToConfirm } from '@/components/SlideToConfirm/SlideToConfirm';
 
 export default function ReadyPage() {
 	const [reset, setReset] = useState(true);
@@ -38,6 +39,13 @@ export default function ReadyPage() {
 			) : (
 				<Button>Connect</Button>
 			)}
+
+			<SlideToConfirm
+				label="Confirm"
+				onConfirm={() => {
+					console.log('Done');
+				}}
+			/>
 		</>
 	);
 }
