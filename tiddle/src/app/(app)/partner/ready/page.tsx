@@ -6,28 +6,66 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { PathBack } from '@/components/PathBack/PathBack';
 import { Htag } from '@/components/Htag/Htag';
 import TextMain from '@/components/TextMain/TextMain';
+import styles from './page.module.scss';
 
 export default function ReadyPage() {
 	const [reset, setReset] = useState(true);
 	return (
-		<>
-			<PathBack>Your Partner</PathBack>
-			<div>
-				<div>
-					<img src="/slider/avatar1big.png" alt="" />
-					Name
-				</div>
-				<Htag tag="h2">Your partner is ready to connect</Htag>
-				<TextMain type="text">
-					Start improving your relationships together right now{' '}
-				</TextMain>
-			</div>
+		<AnimatePresence>
 			<motion.div
-				style={{
-					position: 'relative'
-				}}
+				className={styles.wrapper}
+				key="NoReady"
+				initial={{ opacity: 0, x: 1000 }}
+				animate={{ opacity: 1, x: 0 }}
+				exit={{ opacity: 0, x: -1000 }}
+				transition={{ duration: 0.4 }}
 			>
-				<AnimatePresence>
+				<PathBack>Your Partner</PathBack>
+				{reset ? (
+					<motion.div className={styles.avatarWrapper}>
+						<div className={styles.avatar}>
+							<img src="/slider/avatar1big.png" alt="" />
+							Name
+						</div>
+						<div className={styles.textWrapper}>
+							<Htag tag="h2">Your partner is ready to connect</Htag>
+							<TextMain type="text">
+								Start improving your relationships together right now
+							</TextMain>
+						</div>
+					</motion.div>
+				) : (
+					<motion.div
+						key="Ready"
+						initial={{ opacity: 0, x: 1000 }}
+						animate={{ opacity: 1, x: 0 }}
+						exit={{ opacity: 0, x: -1000 }}
+						transition={{ duration: 0.4 }}
+						className={styles.avatarWrapper}
+					>
+						<div className={styles.avatarReady}>
+							<img
+								src="/components/backgroundReady.png"
+								alt=""
+								className={styles.avatarBg}
+							/>
+							<img src="/slider/avatar1.png" alt="" className={styles.avatar} />
+							<img src="/slider/avatar2.png" alt="" className={styles.avatar} />
+						</div>
+						<div className={styles.textWrapper}>
+							<Htag tag="h2">You are connected</Htag>
+							<TextMain type="text">
+								You and your partner can now start using the app together
+							</TextMain>
+						</div>
+					</motion.div>
+				)}
+				<motion.div
+					className={styles.btn}
+					style={{
+						position: 'relative'
+					}}
+				>
 					{reset ? (
 						<SlideToConfirm
 							label="Connect"
@@ -37,15 +75,11 @@ export default function ReadyPage() {
 						/>
 					) : (
 						<motion.div
-							initial={{ opacity: 0, x: 1000 }}
+							initial={{ opacity: 0, x: 100 }}
 							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: -1000 }}
+							exit={{ opacity: 0, x: -100 }}
 							transition={{ duration: 0.5 }}
 							key="Btn"
-						//	initial={{ opacity: 0 }}
-						//	animate={{ opacity: 1 }}
-						//	exit={{ opacity: 0 }}
-						//	transition={{ duration: 1, ease: 'easeOut' }}
 							style={{
 								position: 'absolute',
 								top: 0,
@@ -57,8 +91,8 @@ export default function ReadyPage() {
 							<Button>Connect</Button>
 						</motion.div>
 					)}
-				</AnimatePresence>
+				</motion.div>
 			</motion.div>
-		</>
+		</AnimatePresence>
 	);
 }
