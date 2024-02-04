@@ -10,6 +10,7 @@ import classNames from 'classnames';
 import { dialogText } from '@/helps/dialog.help';
 import { welcomeQuestionText } from '@/helps/welcome.helps';
 import { ArrowBtn } from '@/components/ArrowBtn/ArrowBtn';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function TestWelcome() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -37,30 +38,40 @@ export default function TestWelcome() {
 				</div>
 				<Button>Start</Button>
 			</div>
-			<Dialog
-				open={isOpen}
-				onClose={() => setIsOpen(false)}
-				className={styles.dialogWrapper}
-			>
-				<Dialog.Panel className={styles.dialogPanel}>
-					<ArrowBtn
-						onClick={() => setIsOpen(false)}
-						className={styles.closeBtn}
-						arrow="close"
-					/>
-					{dialogText.map((item) => (
-						<div key={item.id}>
-							<TextMain type="title" className={styles.iconsText}>
-								<img src="/icons/faceMonocle.svg" alt="" />
-								{item.title}
-							</TextMain>
-							<TextMain type="text" className={styles.text}>
-								{item.text}
-							</TextMain>
-						</div>
-					))}
-				</Dialog.Panel>
-			</Dialog>
+			<AnimatePresence>
+				{isOpen && (
+					<Dialog
+						static
+						initial={{ opacity: 0, y: 100 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: -100 }}
+						transition={{ duration: 0.2 }}
+						as={motion.div}
+						open={isOpen}
+						onClose={() => setIsOpen(false)}
+						className={styles.dialogWrapper}
+					>
+						<Dialog.Panel className={styles.dialogPanel}>
+							<ArrowBtn
+								onClick={() => setIsOpen(false)}
+								className={styles.closeBtn}
+								arrow="close"
+							/>
+							{dialogText.map((item) => (
+								<div key={item.id}>
+									<TextMain type="title" className={styles.iconsText}>
+										<img src="/icons/faceMonocle.svg" alt="" />
+										{item.title}
+									</TextMain>
+									<TextMain type="text" className={styles.text}>
+										{item.text}
+									</TextMain>
+								</div>
+							))}
+						</Dialog.Panel>
+					</Dialog>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 }

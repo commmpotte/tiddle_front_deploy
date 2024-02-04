@@ -32,14 +32,15 @@ export default function Status() {
 		setSelectedQuestion(true);
 	};
 	return (
-		<div className={styles.wrapper}>
+		<>
 			<AnimatePresence>
 				<motion.div
+					className={styles.wrapper}
 					key={questionProgress}
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					//	exit={{ opacity: 0 }}
-					transition={{ duration: 0.5, ease: 'easeIn' }}
+					initial={{ opacity: 0, x: 1000 }}
+					animate={{ opacity: 1, x: 0 }}
+					exit={{ opacity: 0, x: -1000 }}
+					transition={{ duration: 0.7 }}
 				>
 					<TextMain type="title">Quick survey</TextMain>
 					<div className={styles.text}>
@@ -82,6 +83,6 @@ export default function Status() {
 					</form>
 				</motion.div>
 			</AnimatePresence>
-		</div>
+		</>
 	);
 }
