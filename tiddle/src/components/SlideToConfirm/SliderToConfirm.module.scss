@@ -1,39 +1,20 @@
 .slide {
-	height: 52px;
-	width: 100%;
-	border-radius: 6rem;
-	font-size: 16px;
-	font-weight: bold;
-	color: white;
+	@include box(100%, 52px);
+	@include text-styles(16px, 1, $white, $font-weight: bold);
+	@include flexbox(center, center);
+
+	border-radius: 20px;
 	background-color: $border-checkbox-color;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	position: relative;
 	will-change: transform;
 
 	.toggle {
-		height: 52px;
-		width: 110px;
+		@include box(110px, 52px);
+		@include flexbox(center, center, 0, row);
 		position: absolute;
 		left: 0;
 		background: $active-color;
 		border-radius: 20px;
 		cursor: pointer;
-		font-size: 16px;
-		line-height: 1;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		//	padding: 18px 14px;
-
-		div {
-			align-self: center;
-		}
-		span {
-			right: 0;
-			display: block;
-		}
 	}
 }
