@@ -10,6 +10,9 @@ import styles from './page.module.scss';
 
 export default function ReadyPage() {
 	const [reset, setReset] = useState(true);
+	const handleSlide = () => {
+		setReset(!reset);
+	};
 	return (
 		<AnimatePresence>
 			<motion.div
@@ -18,7 +21,7 @@ export default function ReadyPage() {
 				initial={{ opacity: 0, x: 1000 }}
 				animate={{ opacity: 1, x: 0 }}
 				exit={{ opacity: 0, x: -1000 }}
-				transition={{ duration: 0.4 }}
+				transition={{ duration: 0.5 }}
 			>
 				<PathBack>Your Partner</PathBack>
 				{reset ? (
@@ -40,7 +43,7 @@ export default function ReadyPage() {
 						initial={{ opacity: 0, x: 1000 }}
 						animate={{ opacity: 1, x: 0 }}
 						exit={{ opacity: 0, x: -1000 }}
-						transition={{ duration: 0.4 }}
+						transition={{ duration: 0.5 }}
 						className={styles.avatarWrapper}
 					>
 						<div className={styles.avatarReady}>
@@ -67,12 +70,7 @@ export default function ReadyPage() {
 					}}
 				>
 					{reset ? (
-						<SlideToConfirm
-							label="Connect"
-							onConfirm={() => {
-								setReset(!reset);
-							}}
-						/>
+						<SlideToConfirm label="Connect" onConfirm={handleSlide} />
 					) : (
 						<motion.div
 							initial={{ opacity: 0, x: 100 }}
