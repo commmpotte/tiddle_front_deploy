@@ -10,7 +10,7 @@ type Props = {
 let RIGHTS_OFFSET = 0;
 const START_POSITION = 110;
 export function SlideToConfirm({ label, onConfirm }: Props) {
-	const [widthX, setX] = useState(0);
+	const controls = useAnimation();
 	const componentRef = useRef(null);
 
 	useEffect(() => {
@@ -23,16 +23,16 @@ export function SlideToConfirm({ label, onConfirm }: Props) {
 	const handleTouchStart = (event: any, info: PanInfo) => {
 		const x = info.offset.x;
 		if (x >= 0) {
-			setX(x < RIGHTS_OFFSET ? x : RIGHTS_OFFSET);
+			controls.set({ x: x < RIGHTS_OFFSET ? x : RIGHTS_OFFSET });
 		}
 	};
 
 	const handleTouchEnd = (event: any, info: PanInfo) => {
 		if (info.offset.x >= RIGHTS_OFFSET * 0.6) {
-			setX(RIGHTS_OFFSET);
+			controls.set({ x: RIGHTS_OFFSET });
 			onConfirm();
 		} else {
-			setX(0);
+			controls.start({ x: 0 });
 		}
 	};
 	return (
@@ -44,17 +44,16 @@ export function SlideToConfirm({ label, onConfirm }: Props) {
 			<span></span>
 
 			<motion.div
+				drag="x"
+				dragConstraints={componentRef}
 				className={styles.toggle}
-				initial={{ x: 0 }}
-				transition={{ ease: 'linear', duration: 0.2 }}
-				exit={{ x: RIGHTS_OFFSET }}
-				animate={{ x: widthX }}
 				onPan={handleTouchStart}
 				onPanEnd={handleTouchEnd}
 				style={{
 					touchAction: 'none'
 				}}
 				whileHover={{ height: '62px' }}
+				animate={controls}
 			>
 				<motion.div>{label}</motion.div>
 				<motion.span>
