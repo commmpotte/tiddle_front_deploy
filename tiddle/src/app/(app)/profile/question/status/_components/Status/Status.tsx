@@ -9,6 +9,7 @@ import { questionStatus } from '@/helps/questionStatus.help';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Skip } from '@/components/Skip/Skip';
+import { AnimatePresence, motion } from 'framer-motion';
 
 type Inputs = {
 	relationship: string;
@@ -32,42 +33,55 @@ export default function Status() {
 	};
 	return (
 		<div className={styles.wrapper}>
-			<TextMain type="title">Quick survey</TextMain>
-			<div className={styles.text}>
-				<div className={styles.progress}>
-					<img
-						src={`/icons/circuleProgress${questionStatus[questionProgress].id}.svg`}
-						alt=""
-					/>
-					{questionStatus[questionProgress].id}/3
-				</div>
-				<Htag tag="h2">{questionStatus[questionProgress].title}</Htag>
-				<TextMain type="text">
-					{questionStatus[questionProgress].description}
-				</TextMain>
-			</div>
-			<form onSubmit={handleSubmit(onSubmit)} className={styles.formWrapper}>
-				<div className={styles.form}>
-					{questionStatus[questionProgress].checkbox.map((item) => (
-						<IconBtn
-							className={styles.item}
-							key={item}
-							icon={item}
-							onClick={handleClickItem}
-							{...register(questionStatus[questionProgress].checkStatus)}
-						/>
-					))}
-				</div>
-				<div className={styles.linkWrapper}>
-					<Button
-						status={selectedQuestion ? 'active' : 'disabled'}
-						className={styles.Btn}
+			<AnimatePresence>
+				<motion.div
+					key={questionProgress}
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					//	exit={{ opacity: 0 }}
+					transition={{ duration: 0.5, ease: 'easeIn' }}
+				>
+					<TextMain type="title">Quick survey</TextMain>
+					<div className={styles.text}>
+						<div className={styles.progress}>
+							<img
+								src={`/icons/circuleProgress${questionStatus[questionProgress].id}.svg`}
+								alt=""
+							/>
+							{questionStatus[questionProgress].id}/3
+						</div>
+						<Htag tag="h2">{questionStatus[questionProgress].title}</Htag>
+						<TextMain type="text">
+							{questionStatus[questionProgress].description}
+						</TextMain>
+					</div>
+					<form
+						onSubmit={handleSubmit(onSubmit)}
+						className={styles.formWrapper}
 					>
-						{questionStatus[questionProgress].btnName}
-					</Button>
-					<Skip href={paths.app.skip}>Skip for now</Skip>
-				</div>
-			</form>
+						<div className={styles.form}>
+							{questionStatus[questionProgress].checkbox.map((item) => (
+								<IconBtn
+									className={styles.item}
+									key={item}
+									icon={item}
+									onClick={handleClickItem}
+									{...register(questionStatus[questionProgress].checkStatus)}
+								/>
+							))}
+						</div>
+						<div className={styles.linkWrapper}>
+							<Button
+								status={selectedQuestion ? 'active' : 'disabled'}
+								className={styles.Btn}
+							>
+								{questionStatus[questionProgress].btnName}
+							</Button>
+							<Skip href={paths.app.skip}>Skip for now</Skip>
+						</div>
+					</form>
+				</motion.div>
+			</AnimatePresence>
 		</div>
 	);
 }
