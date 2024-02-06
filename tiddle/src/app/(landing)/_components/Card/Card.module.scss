@@ -1,0 +1,86 @@
+.wrapper {
+	@include flexbox(space-between, center);
+	height: 981px;
+	width: 539px;
+	padding: 58px 48px 37px 48px;
+	border-radius: 40px;
+	transition: all 0.5s ease-in;
+	.imgType {
+		box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+		border-radius: 100px;
+		padding: 28px;
+	}
+	.textWrapper {
+		@include flexbox(center, center, 36px);
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 117%;
+		letter-spacing: 0.01em;
+		text-align: center;
+		color: $text-color;
+		text-align: left;
+
+		.title {
+			margin: 0;
+			font-weight: 300;
+			font-size: 36px;
+			line-height: 122%;
+			color: black;
+			cursor: default;
+		}
+		.advantages {
+			margin: 0;
+			padding: 0;
+
+			.extend {
+				@include flexbox(flex-start, center, 12px, row);
+				list-style: none;
+				margin-bottom: 20px;
+				cursor: default;
+			}
+
+			.itemAdv {
+				list-style: none;
+				//	white-space: nowrap;
+				margin-bottom: 20px;
+				@include flexbox(flex-start, center, 12px, row);
+				cursor: default;
+				&::before {
+					content: url('/landing/done.svg');
+				}
+			}
+		}
+	}
+
+	.bottomCard {
+		@include flexbox(center, center, 24px);
+		width: 100%;
+
+		.btn {
+			font-weight: 500;
+			font-size: 28px;
+			line-height: 100%;
+			letter-spacing: 0.01em;
+			text-align: center;
+			color: #fff;
+			padding: 24px;
+		}
+		.bottomText {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 117%;
+			letter-spacing: 0.01em;
+			text-align: center;
+			color: rgba(70, 74, 78, 0.6);
+			cursor: default;
+		}
+	}
+
+	&:hover {
+		box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+	}
+}
+
+.active {
+	box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+}

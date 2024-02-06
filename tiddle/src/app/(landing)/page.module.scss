@@ -1,0 +1,3 @@
+.cardsWrapper {
+	@include flexbox(center, center, 40px, row);
+}
