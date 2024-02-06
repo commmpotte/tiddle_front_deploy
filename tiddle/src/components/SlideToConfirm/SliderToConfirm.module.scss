@@ -1,0 +1,20 @@
+.slide {
+	@include box(100%, 52px);
+	@include text-styles(16px, 1, $white, $font-weight: bold);
+	@include flexbox(center, center);
+
+	border-radius: 20px;
+	background-color: $border-checkbox-color;
+	position: relative;
+	will-change: transform;
+
+	.toggle {
+		@include box(110px, 52px);
+		@include flexbox(center, center, 0, row);
+		position: absolute;
+		left: 0;
+		background: $active-color;
+		border-radius: 20px;
+		cursor: pointer;
+	}
+}

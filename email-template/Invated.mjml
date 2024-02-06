@@ -8,13 +8,16 @@
 			name="Inter"
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
 		/>
+		<mj-style>
+			.box-shadow td { box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+			padding: 11px; border-radius: 50%; width: 58px;}
+		</mj-style>
 	</mj-head>
 	<mj-body background-color="#FFF">
 		<mj-wrapper padding="20px 20px 20px 20px">
 			<mj-hero
 				background-url="/static/invated.png"
 				background-width="570px"
-
 				mode="fixed-height"
 				height="473px"
 				background-height="473px"
@@ -133,6 +136,80 @@
 						line-height="22px"
 						>Best,<br />The Tiddle Team</mj-text
 					>
+				</mj-column>
+			</mj-section>
+			<mj-section padding="0">
+				<mj-column padding="0">
+					<mj-image
+						css-class="box-shadow"
+						src="/static/inst.png"
+						align="center"
+						padding="11px"
+						width="58px"
+						href="https://instagram.com/app.tiddle.me"
+					></mj-image>
+				</mj-column>
+				<mj-column padding="0">
+					<mj-image
+						css-class="box-shadow"
+						src="/static/twitter.svg"
+						align="center"
+						padding="11px"
+						width="58px"
+						href="https://twitter.com/tiddle_app"
+					></mj-image>
+				</mj-column>
+				<mj-column padding="0">
+					<mj-image
+						css-class="box-shadow"
+						src="/static/ticktok.png"
+						align="center"
+						padding="11px"
+						width="58px"
+						href="https://www.tiktok.com/@tiddleme"
+					></mj-image>
+				</mj-column>
+				<mj-column padding="0">
+					<mj-image
+						css-class="box-shadow"
+						src="/static/medium.png"
+						align="center"
+						padding="11px"
+						width="58px"
+						href="https://medium.com/@tiddle_24686"
+					></mj-image>
+				</mj-column>
+				<mj-column padding="0">
+					<mj-image
+						css-class="box-shadow"
+						src="/static/linkedin.png"
+						align="center"
+						padding="11px"
+						width="58px"
+						href="https://www.linkedin.com/company/tiddle-me/"
+					></mj-image>
+				</mj-column>
+
+				<mj-column padding="0">
+					<mj-image
+						css-class="box-shadow"
+						src="/static/email.png"
+						align="center"
+						padding="11px"
+						width="58px"
+						href="https://pinterest.com/apptiddleme"
+					></mj-image>
+				</mj-column>
+
+				<mj-column padding="0">
+					<mj-image
+						css-class="box-shadow"
+						src="/static/youtube.png"
+						align="center"
+						padding="11px"
+						width="58px"
+						href="https://www.youtube.com/@TiddleAppForCouples/"
+					></mj-image>
 				</mj-column>
 			</mj-section>
 		</mj-wrapper>
