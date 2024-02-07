@@ -9,9 +9,9 @@ export default function LandingPage() {
 		<div className={styles.wrapper}>
 			<div className={styles.headerWrapper}>
 				<img src="/landing/header.png" alt="" />
-				<div className={styles.headerWrapper}>
+				<div className={styles.headerText}>
 					{landingHelp.header.map((head) => (
-						<div>{head}</div>
+						<div key={head}>{head}</div>
 					))}
 				</div>
 			</div>

@@ -1,7 +1,8 @@
 .wrapper {
 	@include flexbox(space-between, center);
 	height: 981px;
-	width: 539px;
+	max-width: 539px;
+	width: 100%;
 	padding: 58px 48px 37px 48px;
 	border-radius: 40px;
 	transition: all 0.3s ease-in;

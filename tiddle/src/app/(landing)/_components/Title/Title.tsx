@@ -37,30 +37,32 @@ export function Title({
 		}
 	};
 	return (
-		<AnimatePresence>
-			<h1 className={classNames(styles.Htag, className)} {...props}>
-				<motion.div className={styles.textContainer}>
-					{animateText.map((item, index) => (
-						<motion.span
-							key={index}
-							variants={textVariants}
-							initial="hidden"
-							animate={activeIndex === index ? 'visible' : 'hidden'}
-							exit="hidden"
-							style={{ position: 'absolute' }}
-						>
-							{item}
-						</motion.span>
-					))}
-					<br />
-				</motion.div>
-				<span>
-					Evelate your love
-					<br /> everyday with
-				</span>
-				&nbsp;
-				<span className={styles.link}>{textLink}</span>
-			</h1>
-		</AnimatePresence>
+		<>
+			<AnimatePresence>
+				<h1 className={classNames(styles.Htag, className)} {...props}>
+					<motion.div className={styles.textContainer}>
+						{animateText.map((item, index) => (
+							<motion.span
+								key={index}
+								variants={textVariants}
+								initial="hidden"
+								animate={activeIndex === index ? 'visible' : 'hidden'}
+								exit="hidden"
+								style={{ position: 'absolute' }}
+							>
+								{item}
+							</motion.span>
+						))}
+						<br />
+					</motion.div>
+					<span>
+						Evelate your love
+						<br /> everyday with
+					</span>
+					&nbsp;
+					<span className={styles.link}>{textLink}</span>
+				</h1>
+			</AnimatePresence>
+		</>
 	);
 }
