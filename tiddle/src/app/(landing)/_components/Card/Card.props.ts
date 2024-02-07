@@ -1,8 +1,8 @@
-import { DetailedHTMLProps } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface CardProps
 	extends DetailedHTMLProps<
-		React.HTMLAttributes<HTMLDivElement>,
+		HTMLAttributes<HTMLDivElement>,
 		HTMLDivElement
 	> {
 	type: 'premium' | 'free' | 'standard';

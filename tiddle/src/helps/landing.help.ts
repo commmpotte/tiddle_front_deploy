@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 interface CardProps {
 	plan: 'free' | 'premium' | 'standard';
 	advantages: string[];
@@ -8,10 +10,26 @@ interface CardProps {
 }
 
 interface landingHelpProps {
+	header: string[];
+	title: {
+		animateText: string[];
+		description: ReactNode;
+		textLink: string;
+	};
 	card: CardProps[];
 }
 
 export const landingHelp: landingHelpProps = {
+	header: [
+		'Improve your relationship',
+		'Tiddle App',
+		'Strengthen the emotional bond'
+	],
+	title: {
+		animateText: ['Connect.', 'Improve.', 'Thrive.'],
+		description: 'Evelate your love<br/> everyday with',
+		textLink: 'Tiddle'
+	},
 	card: [
 		{
 			plan: 'free',

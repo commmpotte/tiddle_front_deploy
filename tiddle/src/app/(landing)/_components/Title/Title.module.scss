@@ -1,0 +1,16 @@
+.Htag {
+	font-weight: 400;
+	font-size: 96px;
+	line-height: 125%;
+	color: $text-color;
+	margin: 0;
+	padding: 0;
+
+	.textContainer {
+		position: relative;
+	}
+
+	.link {
+		color: $active-color;
+	}
+}

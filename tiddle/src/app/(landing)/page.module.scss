@@ -1,3 +1,64 @@
-.cardsWrapper {
-	@include flexbox(center, center, 40px, row);
+.wrapper {
+	padding: 55px 60px;
+	@include flexbox(center, center, 0, column);
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1920px;
+	.headerWrapper {
+		@include flexbox(center, center, 32px, column);
+		margin-bottom: 107px;
+		.headerWrapper {
+			width: 100%;
+			@include flexbox(space-between, center, 20px, row);
+			font-weight: 400;
+			font-size: 28px;
+			line-height: 129%;
+			color: $text-color;
+		}
+	}
+	.titleWrapper {
+		//@include flexbox(space-between, center, 0px, row);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+		margin-bottom: 107px;
+
+		.phones {
+			position: relative;
+			width: 100%;
+
+			.imgPhones {
+				position: absolute;
+				left: -55px;
+				top: -225px;
+			}
+		}
+		.title {
+			display: grid;
+			grid-template-columns: [start] 1fr 2fr [end];
+			grid-template-rows: auto auto auto;
+			grid-row-gap: 64px;
+			.titleText {
+				grid-column: start / end;
+			}
+		}
+		.btn {
+			position: relative;
+
+			.fire {
+				position: absolute;
+				border-radius: 100px;
+				width: 37px;
+				height: 37px;
+				padding: 11px;
+				box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+				background: $white;
+				right: -32px;
+				top: -32px;
+			}
+		}
+	}
+	.cardsWrapper {
+		@include flexbox(center, center, 40px, row);
+	}
 }
