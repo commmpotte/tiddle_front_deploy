@@ -1,0 +1,55 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: [start] 1fr [mid] 1fr [end];
+	grid-template-rows: auto auto auto auto 1fr;
+	position: relative;
+	width: 100%;
+	gap: 10px;
+	margin-bottom: 154px;
+
+	.slip {
+		grid-column: start / end;
+		white-space: wrap;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 133%;
+		z-index: 10;
+		justify-self: flex-start;
+		&:nth-child(even) {
+			grid-column: start / end;
+			justify-self: flex-end;
+		}
+
+		&:nth-child(2) {
+			max-width: 360px;
+		}
+		&:nth-child(3) {
+			margin-top: -100px;
+			max-width: 435px;
+		}
+		&:nth-child(4) {
+			margin-top: 36px;
+			max-width: 405px;
+		}
+
+		&:nth-child(5) {
+			max-width: 340px;
+		}
+		&:last-child {
+			grid-column: mid / end;
+			justify-self: flex-start;
+			max-width: 354px;
+			margin-top: 174px;
+		}
+	}
+
+	.img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		max-width: 100%;
+		height: auto;
+	}
+}

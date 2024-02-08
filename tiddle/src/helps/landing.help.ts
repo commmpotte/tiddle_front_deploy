@@ -18,6 +18,7 @@ interface landingHelpProps {
 		h3: string;
 		secondaryTextH3: string;
 	};
+	whyTiddle: string[];
 	title: {
 		animateText: string[];
 		description: ReactNode;
@@ -46,6 +47,13 @@ export const landingHelp: landingHelpProps = {
 		secondaryTextH3:
 			'Yes, and we suggest you a tool to track your relationship journey!'
 	},
+	whyTiddle: [
+		'Over 20 features to address specific issues in your relationship',
+		'Begin conversing with your partner in the same language',
+		'Access to expert materials on relationship psychology',
+		'Joyful way to improve your relationship',
+		'Individual assessment of relationships without visiting a psychologist'
+	],
 	title: {
 		animateText: ['Connect.', 'Improve.', 'Thrive.'],
 		description: 'Evelate your love<br/> everyday with',

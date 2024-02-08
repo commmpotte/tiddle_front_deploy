@@ -4,6 +4,7 @@ import styles from './page.module.scss';
 import { Header } from './_components/Header/Header';
 import { WhatIsIt } from './_components/WhatIsIt/WhatIsIt';
 import { Troubles } from './_components/Trobles/Troubles';
+import { ElipseAvatars } from './_components/ElipseAvatars/ElipseAvatars';
 
 export default function LandingPage() {
 	return (
@@ -21,6 +22,7 @@ export default function LandingPage() {
 				secondaryH3={landingHelp.trobles.secondaryTextH3}
 				slips={landingHelp.trobles.slips}
 			/>
+			<ElipseAvatars slips={landingHelp.whyTiddle} />
 			<div className={styles.cardsWrapper}>
 				{landingHelp.card.map((card) => (
 					<Card
