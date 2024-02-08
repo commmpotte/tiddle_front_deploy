@@ -1,38 +1,51 @@
 {
-  "name": "tiddle",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@headlessui/react": "^1.7.18",
-    "antd": "^5.13.3",
-    "classnames": "^2.5.1",
-    "framer-motion": "^11.0.3",
-    "next": "14.0.4",
-    "next-auth": "^4.24.5",
-    "react": "^18",
-    "react-code-input": "^3.10.1",
-    "react-dom": "^18",
-    "react-hook-form": "^7.49.3",
-    "react-hot-toast": "^2.4.1",
-    "react-responsive-carousel": "^3.2.23",
-    "react-swipezor": "^1.0.7"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "sass": "^1.69.7",
-    "typescript": "^5",
-    "zustand": "^4.5.0"
-  }
+	"name": "tiddle",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"storybook": "storybook dev -p 6006 -s ./public",
+		"build-storybook": "storybook build"
+	},
+	"dependencies": {
+		"@headlessui/react": "^1.7.18",
+		"antd": "^5.13.3",
+		"classnames": "^2.5.1",
+		"framer-motion": "^11.0.3",
+		"next": "14.0.4",
+		"next-auth": "^4.24.5",
+		"react": "^18",
+		"react-code-input": "^3.10.1",
+		"react-dom": "^18",
+		"react-hook-form": "^7.49.3",
+		"react-hot-toast": "^2.4.1",
+		"react-responsive-carousel": "^3.2.23",
+		"storybook-addon-sass-postcss": "^0.1.4"
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "^7.6.13",
+		"@storybook/addon-interactions": "^7.6.13",
+		"@storybook/addon-links": "^7.6.13",
+		"@storybook/addon-onboarding": "^1.0.11",
+		"@storybook/addon-styling": "^1.3.7",
+		"@storybook/addon-styling-webpack": "^0.0.6",
+		"@storybook/blocks": "^7.6.13",
+		"@storybook/nextjs": "^7.6.13",
+		"@storybook/react": "^7.5.3",
+		"@storybook/test": "^7.6.13",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@typescript-eslint/eslint-plugin": "^6.18.1",
+		"@typescript-eslint/parser": "^6.18.1",
+		"eslint": "^8",
+		"eslint-config-next": "14.0.4",
+		"eslint-plugin-storybook": "^0.6.15",
+		"storybook": "^7.6.13",
+		"typescript": "^5",
+		"zustand": "^4.5.0"
+	}
 }

@@ -1,0 +1,40 @@
+.wrapper {
+	@include flexbox(center, center, 86px, column);
+	margin-top: 91px;
+	margin-bottom: 142px;
+	.titleWrapper {
+		@include flexbox(center, center, 20px, column);
+	}
+	.title {
+		font-weight: 400;
+		font-size: 48px;
+		text-align: center;
+		color: $text-color;
+		margin: 0;
+		padding: 0;
+	}
+
+	.secondary {
+		font-weight: 400;
+		font-size: 32px;
+		text-align: center;
+		color: $secondary-text;
+	}
+
+	.slipsWrapper {
+		@include flexbox(center, center, 84px, row);
+		flex-wrap: wrap;
+	}
+	.bottomTextWrapper {
+		@include flexbox(center, center, 24px, column);
+
+		.titleH3 {
+			font-weight: 400;
+			font-size: 36px;
+			text-align: center;
+			color: $text-color;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

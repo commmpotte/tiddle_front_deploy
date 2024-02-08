@@ -1,0 +1,48 @@
+.titleWrapper {
+	//@include flexbox(space-between, center, 0px, row);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	margin-bottom: 64px;
+
+	.phones {
+		flex: 1 0 50%;
+		max-width: 100%;
+		position: relative;
+		width: 100%;
+		z-index: -1;
+
+		.imgPhones {
+			max-width: 100%;
+			height: auto;
+			// position: absolute;
+			// left: 70px;
+			// top: -101px;
+			// z-index: 0;
+		}
+	}
+	.title {
+		display: grid;
+		grid-template-columns: [start] 1fr 2fr [end];
+		grid-template-rows: auto auto auto;
+		grid-row-gap: 64px;
+		.titleText {
+			grid-column: start / end;
+		}
+	}
+	.btn {
+		position: relative;
+
+		.fire {
+			position: absolute;
+			border-radius: 100px;
+			width: 37px;
+			height: 37px;
+			padding: 11px;
+			box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+			background: $white;
+			right: -32px;
+			top: -32px;
+		}
+	}
+}

@@ -1,38 +1,26 @@
 import { landingHelp } from '@/helps/landing.help';
 import { Card } from './_components/Card/Card';
 import styles from './page.module.scss';
-import { Title } from './_components/Title/Title';
-import { Button } from '@/components/Button/Button';
+import { Header } from './_components/Header/Header';
+import { WhatIsIt } from './_components/WhatIsIt/WhatIsIt';
+import { Troubles } from './_components/Trobles/Troubles';
 
 export default function LandingPage() {
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.headerWrapper}>
-				<img src="/landing/header.png" alt="" />
-				<div className={styles.headerText}>
-					{landingHelp.header.map((head) => (
-						<div key={head}>{head}</div>
-					))}
-				</div>
-			</div>
-			<div className={styles.titleWrapper}>
-				<div className={styles.title}>
-					<div>What is it</div>
-					<Title
-						className={styles.titleText}
-						description={landingHelp.title.description}
-						animateText={landingHelp.title.animateText}
-						textLink={landingHelp.title.textLink}
-					/>
-					<div className={styles.btn}>
-						<img src="/landing/standard.png" alt="" className={styles.fire} />
-						<Button>Try now</Button>
-					</div>
-				</div>
-				<div className={styles.phones}>
-					<img src="/landing/phones.png" alt="" className={styles.imgPhones} />
-				</div>
-			</div>
+			<Header texts={landingHelp.header}></Header>
+			<WhatIsIt
+				description={landingHelp.title.description}
+				animateText={landingHelp.title.animateText}
+				textLink={landingHelp.title.textLink}
+			/>
+			<Troubles
+				tagH2={landingHelp.trobles.h2}
+				tagH3={landingHelp.trobles.h3}
+				secondaryH2={landingHelp.trobles.secondaryTextH2}
+				secondaryH3={landingHelp.trobles.secondaryTextH3}
+				slips={landingHelp.trobles.slips}
+			/>
 			<div className={styles.cardsWrapper}>
 				{landingHelp.card.map((card) => (
 					<Card

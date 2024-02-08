@@ -11,6 +11,13 @@ interface CardProps {
 
 interface landingHelpProps {
 	header: string[];
+	trobles: {
+		h2: string;
+		secondaryTextH2: string;
+		slips: string[];
+		h3: string;
+		secondaryTextH3: string;
+	};
 	title: {
 		animateText: string[];
 		description: ReactNode;
@@ -25,6 +32,20 @@ export const landingHelp: landingHelpProps = {
 		'Tiddle App',
 		'Strengthen the emotional bond'
 	],
+	trobles: {
+		h2: 'Did you know that 60% of issues in couples go unspoken?',
+		secondaryTextH2: "And here's why:",
+		slips: [
+			'Lack of intimacy 🔗',
+			'Recurring conflicts 😤',
+			'Misunderstanding 🧶',
+			'Monotony in sexual life 👄',
+			'Relationship routine 😔'
+		],
+		h3: 'So can happy relationships be built at all?',
+		secondaryTextH3:
+			'Yes, and we suggest you a tool to track your relationship journey!'
+	},
 	title: {
 		animateText: ['Connect.', 'Improve.', 'Thrive.'],
 		description: 'Evelate your love<br/> everyday with',

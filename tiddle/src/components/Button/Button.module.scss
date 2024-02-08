@@ -1,5 +1,7 @@
+// @import '../../styles/mixins';
+// @import '../../styles/variables';
 .button {
-	@include text-styles(20px, 28px,  $white, $font-weight: 400);
+	@include text-styles(20px, 28px, $white, $font-weight: 400);
 	border-radius: 20px;
 	border: none;
 	letter-spacing: 0.2px;
