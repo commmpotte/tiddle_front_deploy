@@ -1,7 +1,8 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { CardPropsItem } from '@/helps/landing.help';
 
-export interface ElipseAvatarsProps
+export interface PlanProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	slips: string[];
+	cards: CardPropsItem[];
 	tag: string;
 }

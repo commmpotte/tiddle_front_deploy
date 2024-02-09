@@ -1,0 +1,9 @@
+.cardsWrapper {
+	@include flexbox(space-between, center, 40px, row);
+	width: 100%;
+}
+
+.wrapper {
+	@include flexbox(center, flex-start, 64px);
+	width: 100%;
+}

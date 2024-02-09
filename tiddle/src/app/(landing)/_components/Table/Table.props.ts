@@ -1,7 +1,10 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export interface ElipseAvatarsProps
+export interface TableProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	slips: string[];
 	tag: string;
+	column: {
+		title: string;
+		description: string;
+	}[];
 }

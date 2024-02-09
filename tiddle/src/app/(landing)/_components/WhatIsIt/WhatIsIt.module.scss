@@ -23,16 +23,29 @@
 	}
 	.title {
 		display: grid;
-		grid-template-columns: [start] 1fr 2fr [end];
+		grid-template-columns: [start] 1fr [mid] 1.5fr [end];
 		grid-template-rows: auto auto auto;
 		grid-row-gap: 64px;
+		position: relative;
+
 		.titleText {
 			grid-column: start / end;
 		}
+		.tag {
+			align-self: baseline;
+			justify-self: baseline;
+		}
 	}
-	.btn {
+	.btnWrapper {
 		position: relative;
 
+		.button {
+			font-weight: 500 !important;
+			font-size: 28px !important;
+			line-height: 100% !important;
+			letter-spacing: 0.01em !important;
+			text-align: center !important;
+		}
 		.fire {
 			position: absolute;
 			border-radius: 100px;

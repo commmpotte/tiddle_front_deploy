@@ -1,13 +1,73 @@
-.wrapper {
-	padding: 55px 60px;
+.main {
+	//	padding: 55px 60px;
 	@include flexbox(center, center, 0, column);
 	box-sizing: border-box;
 	margin: 0 auto;
-	max-width: 1920px;
+	width: 100%;
 
-	
-	.cardsWrapper {
-		@include flexbox(space-between, center, 40px, row);
+	.wrapper {
+		padding: 55px 60px;
+		@include flexbox(center, center, 0, column);
+		box-sizing: border-box;
+		margin: 0 auto;
+		max-width: 1920px;
 		width: 100%;
+	}
+
+	.hditWrapper {
+		position: relative;
+		background-color: #9251ff;
+		background-image: url('/landing/backgroundHowDoesItWork.svg');
+		background-repeat: no-repeat;
+		background-position: top left 100%;
+		width: 100%;
+		max-width: 1920px;
+		margin-bottom: 195px;
+
+		//max-width: 100% !important;
+
+		.bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 10;
+			max-width: 100%;
+			height: auto;
+		}
+		.tests {
+			display: grid;
+			grid-template-columns: [start] 1fr 1fr [end];
+			grid-template-rows: auto auto;
+			z-index: 100;
+			margin-top: 268px;
+
+			.tag {
+				grid-column: start / end;
+				align-self: baseline;
+				justify-self: baseline;
+			}
+			.quiz {
+				align-self: center;
+				justify-self: flex-end;
+				max-width: 100%;
+				height: auto;
+			}
+
+			.iphone {
+				align-self: center;
+				justify-self: center;
+				width: 100%;
+				position: relative;
+				margin-right: 300px;
+				//overflow: hidden;
+
+				img {
+					position: relative;
+					max-width: 100%;
+					height: auto;
+					// margin-left: -100px;
+				}
+			}
+		}
 	}
 }

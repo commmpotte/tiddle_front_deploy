@@ -53,3 +53,8 @@
 		height: auto;
 	}
 }
+
+.avatars {
+	@include flexbox(center, flex-start, 79px);
+	width: 100%;
+}

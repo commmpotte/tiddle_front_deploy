@@ -1,9 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
-export interface WhatIsItProps
+export interface TagProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	description: ReactNode;
-	animateText: string[];
-	textLink: string;
-	tag: string;
+	children: ReactNode;
 }
