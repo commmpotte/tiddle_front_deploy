@@ -8,7 +8,7 @@ import { Tag } from '../Tag/Tag';
 export function Faq({ cards, ...props }: FaqProps) {
 	const shouldReduceMotion = useReducedMotion();
 	return (
-		<div className={styles.wrapper}>
+		<div className={styles.wrapper} id="fifth-section">
 			<Tag>FAQ</Tag>
 			<div className={styles.faqWrapper} {...props} role="list">
 				{cards.map((card, index) => (

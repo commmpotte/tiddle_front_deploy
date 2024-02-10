@@ -26,7 +26,7 @@ export default function LandingLayout({
 					rel="stylesheet"
 				></link>
 			</head>
-			<body>
+			<body style={{ scrollBehavior: 'smooth' }}>
 				<Providers>{children}</Providers>
 			</body>
 		</html>

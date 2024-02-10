@@ -1,3 +1,4 @@
+'use client';
 import { landingHelp } from '@/helps/landing.help';
 import styles from './page.module.scss';
 import { Header } from './_components/Header/Header';
@@ -36,7 +37,7 @@ export default function LandingPage() {
 			</div>
 			<div className={styles.hditWrapper}>
 				<div className={styles.wrapper}>
-					<div className={styles.tests}>
+					<div className={styles.tests} id="third-section">
 						<Tag className={styles.tag}>How does it work</Tag>
 						<img src="/landing/plug.png" alt="" className={styles.quiz} />
 						<div className={styles.iphone}>

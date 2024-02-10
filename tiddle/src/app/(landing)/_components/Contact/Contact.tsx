@@ -2,7 +2,11 @@ import { LinkBtn } from '../LinkBtn/LinkBtn';
 import styles from './Contact.module.scss';
 import { ContactProps } from './Contact.props';
 
-export function Contact({ links, social, ...props }: ContactProps) {
+export function Contact({
+	links,
+	social,
+	...props
+}: ContactProps) {
 	return (
 		<div className={styles.wrapperContact}>
 			<div className={styles.wrapper} {...props}>
@@ -23,7 +27,10 @@ export function Contact({ links, social, ...props }: ContactProps) {
 				<img src="/landing/logo.png" alt="" />
 				<div className={styles.links}>
 					{links.map((link, index) => (
-						<LinkBtn key={index} urls={link.url}>
+						<LinkBtn
+							key={index}
+							urls={link.url}
+						>
 							{link.name}
 						</LinkBtn>
 					))}

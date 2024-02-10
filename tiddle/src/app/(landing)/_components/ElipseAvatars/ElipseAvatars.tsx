@@ -4,7 +4,7 @@ import { Slip } from '../Slip/Slip';
 import { Tag } from '../Tag/Tag';
 export function ElipseAvatars({ slips, tag, ...props }: ElipseAvatarsProps) {
 	return (
-		<div className={styles.avatars}>
+		<div className={styles.avatars} id="first-section">
 			<Tag>{tag}</Tag>
 			<div {...props} className={styles.wrapper}>
 				<img src="/landing/elipseavatar.svg" className={styles.img} alt="" />

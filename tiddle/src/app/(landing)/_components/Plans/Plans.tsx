@@ -4,7 +4,7 @@ import { Tag } from '../Tag/Tag';
 import { Card } from '../Card/Card';
 export function Plans({ cards, tag, ...props }: PlanProps) {
 	return (
-		<div className={styles.wrapper} {...props}>
+		<div className={styles.wrapper} {...props} id="fourth-section">
 			<Tag>{tag}</Tag>
 			<div className={styles.cardsWrapper}>
 				{cards.map((card) => (

@@ -3,7 +3,7 @@ import styles from './Table.module.scss';
 import { Tag } from '../Tag/Tag';
 export function Table({ column, tag, ...props }: TableProps) {
 	return (
-		<div className={styles.wrapper}>
+		<div className={styles.wrapper} id="second-section">
 			<Tag>{tag}</Tag>
 			<div {...props} className={styles.wrapperTable}>
 				{column.map((item, index) => (

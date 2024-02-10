@@ -57,7 +57,7 @@ export const FaqCard = motion(
 					{...props}
 					onClick={scrollToReview}
 				>
-					<div className={styles.faqControl}>
+					<div className={styles.faqControl} ref={reviewRef}>
 						<img
 							src="/landing/question.svg"
 							alt=""
@@ -84,7 +84,6 @@ export const FaqCard = motion(
 							damping: 8,
 							stiffness: 100
 						}}
-						ref={reviewRef}
 					>
 						{description}
 					</motion.div>

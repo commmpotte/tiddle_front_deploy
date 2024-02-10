@@ -14,6 +14,7 @@ export function LinkBtn({
 	return (
 		<Link
 			href={urls}
+			scroll={true}
 			className={classNames(className, {
 				[styles.social]: social,
 				[styles.design]: design,

@@ -197,23 +197,23 @@ export const landingHelp: landingHelpProps = {
 		links: [
 			{
 				name: 'Why Tiddle',
-				url: '#'
+				url: '#first-section'
 			},
 			{
 				name: 'How does it work',
-				url: '#'
+				url: '#second-section'
 			},
 			{
 				name: 'Features',
-				url: '#'
+				url: '#third-section'
 			},
 			{
 				name: 'Plans & Price',
-				url: '#'
+				url: '#fourth-section'
 			},
 			{
 				name: 'FAQ',
-				url: '#'
+				url: '#fifth-section'
 			}
 		],
 		social: [
