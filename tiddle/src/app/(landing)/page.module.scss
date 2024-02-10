@@ -13,6 +13,14 @@
 		max-width: 1920px;
 		width: 100%;
 	}
+	.wrapperBottom {
+		padding: 55px 110px;
+		@include flexbox(center, center, 0, column);
+		box-sizing: border-box;
+		margin: 0 auto;
+		max-width: 1920px;
+		width: 100%;
+	}
 
 	.hditWrapper {
 		position: relative;

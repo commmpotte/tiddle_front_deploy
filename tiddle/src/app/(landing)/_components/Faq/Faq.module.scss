@@ -1,0 +1,9 @@
+.faqWrapper {
+	@include flexbox(center, center, 16px);
+	width: 100%;
+}
+
+.wrapper {
+	@include flexbox(center, flex-start, 64px);
+	margin-bottom: 137px;
+}

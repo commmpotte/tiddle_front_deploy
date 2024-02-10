@@ -37,8 +37,12 @@ interface landingHelpProps {
 	};
 	plans: {
 		tag: string;
-		card: CardProps[];
+		card: CardPropsItem[];
 	};
+	faq: {
+		title: string;
+		description: string;
+	}[];
 }
 
 export const landingHelp: landingHelpProps = {
@@ -139,5 +143,44 @@ export const landingHelp: landingHelpProps = {
 				active: false
 			}
 		]
-	}
+	},
+	faq: [
+		{
+			title: 'How does Tiddle maintain user confidentiality and data security?',
+			description:
+				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
+		},
+		{
+			title:
+				'Is the subscription cost calculated for both partners or just one?',
+			description:
+				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
+		},
+		{
+			title: 'Can you guarantee that my relationship will improve?',
+			description:
+				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
+		},
+		{
+			title: 'Will anyone read my messages and study the data?',
+			description:
+				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
+		},
+		{
+			title:
+				'Is it certain that the app will help improve my relationship with my partner?',
+			description:
+				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
+		},
+		{
+			title: 'How do I persuade my partner to start using the app?',
+			description:
+				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
+		},
+		{
+			title: 'Is the cost for both individuals or just one?',
+			description:
+				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
+		}
+	]
 };

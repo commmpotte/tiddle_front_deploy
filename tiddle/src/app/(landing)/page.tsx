@@ -7,6 +7,7 @@ import { ElipseAvatars } from './_components/ElipseAvatars/ElipseAvatars';
 import { Table } from './_components/Table/Table';
 import { Plans } from './_components/Plans/Plans';
 import { Tag } from './_components/Tag/Tag';
+import { Faq } from './_components/Faq/Faq';
 
 export default function LandingPage() {
 	return (
@@ -43,8 +44,9 @@ export default function LandingPage() {
 					</div>
 				</div>
 			</div>
-			<div className={styles.wrapper}>
+			<div className={styles.wrapperBottom}>
 				<Plans tag={landingHelp.plans.tag} cards={landingHelp.plans.card} />
+				<Faq cards={landingHelp.faq} />
 			</div>
 		</div>
 	);
