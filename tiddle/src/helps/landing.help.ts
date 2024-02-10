@@ -43,6 +43,16 @@ interface landingHelpProps {
 		title: string;
 		description: string;
 	}[];
+	contact: {
+		social: {
+			name: string;
+			url: string;
+		}[];
+		links: {
+			name: string;
+			url: string;
+		}[];
+	};
 }
 
 export const landingHelp: landingHelpProps = {
@@ -182,5 +192,59 @@ export const landingHelp: landingHelpProps = {
 			description:
 				'The Tiddle application ensures a high level of confidentiality and security. We prioritize the privacy of our users and employ robust measures to safeguard your personal information. All data transmission and storage adhere to industry-standard encryption protocols, ensuring that your information remains secure and confidential.'
 		}
-	]
+	],
+	contact: {
+		links: [
+			{
+				name: 'Why Tiddle',
+				url: '#'
+			},
+			{
+				name: 'How does it work',
+				url: '#'
+			},
+			{
+				name: 'Features',
+				url: '#'
+			},
+			{
+				name: 'Plans & Price',
+				url: '#'
+			},
+			{
+				name: 'FAQ',
+				url: '#'
+			}
+		],
+		social: [
+			{
+				name: 'instagram',
+				url: '#'
+			},
+			{
+				name: 'twitter',
+				url: '#'
+			},
+			{
+				name: 'tiktok',
+				url: '#'
+			},
+			{
+				name: 'hz',
+				url: '#'
+			},
+			{
+				name: 'linkedin',
+				url: '#'
+			},
+			{
+				name: 'pinterest',
+				url: '#'
+			},
+			{
+				name: 'youtube',
+				url: '#'
+			}
+		]
+	}
 };
