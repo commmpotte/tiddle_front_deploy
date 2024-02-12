@@ -88,7 +88,9 @@ export const authConfig: AuthOptions = {
 		})
 	],
 	pages: {
-		signIn: '/login'
+		signIn: '/login',
+		error: '',
+		newUser: '/signup'
 	},
 	session: {
 		strategy: 'jwt'
