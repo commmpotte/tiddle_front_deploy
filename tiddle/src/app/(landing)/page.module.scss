@@ -4,6 +4,8 @@
 	box-sizing: border-box;
 	margin: 0 auto;
 	width: 100%;
+	overflow-y: scroll;
+	min-height: 400px;
 
 	.wrapper {
 		@include flexbox(center, center, 0, column);
@@ -63,7 +65,7 @@
 				@include gridContainer(center, center, 2);
 				width: 100%;
 				margin-right: 300px;
-				
+
 				img {
 					max-width: 100%;
 					height: auto;
@@ -72,4 +74,15 @@
 			}
 		}
 	}
+}
+
+.progressBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 10px;
+	background: $main-colour-elements;
+	transform-origin: 0%;
+	z-index: 10000;
 }
