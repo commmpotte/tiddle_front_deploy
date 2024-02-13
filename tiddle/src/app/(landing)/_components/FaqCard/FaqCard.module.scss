@@ -3,7 +3,7 @@
 	border-radius: 40px;
 	padding: 24px 31px 32px 31px;
 	cursor: pointer;
-	// @include flexbox(flex-start, center, 40px, column);
+
 	.faqControl {
 		@include flexbox(flex-start, center, 20px, row);
 		width: 100%;
@@ -18,11 +18,8 @@
 		padding: 11px;
 	}
 	.text {
-		font-weight: 500;
-		font-size: 28px;
-		line-height: 129%;
+		@include text-styles(28px, 129%, $text-main, 500);
 		letter-spacing: 0.01em;
-		color: $text-color;
 	}
 	.arrow {
 		box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
@@ -31,12 +28,8 @@
 		margin-left: auto;
 	}
 	.faqDescription {
-		font-weight: 400;
-		font-size: 28px;
-		line-height: 129%;
+		@include text-styles(28px, 129%, $text-main, 400, left);
 		letter-spacing: 0.01em;
-		color: $text-color;
-		text-align: left;
 	}
 }
 

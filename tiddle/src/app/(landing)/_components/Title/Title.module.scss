@@ -1,8 +1,5 @@
 .Htag {
-	font-weight: 400;
-	font-size: 96px;
-	line-height: 125%;
-	color: $text-color;
+	@include text-styles(96px, 125%, $text-main, 400);
 	margin: 0;
 	padding: 0;
 	white-space: nowrap;
@@ -13,6 +10,6 @@
 	}
 
 	.link {
-		color: $active-color;
+		color: $main-colour-elements;
 	}
 }

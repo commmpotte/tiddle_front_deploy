@@ -1,8 +1,7 @@
 .wrapper {
 	@include flexbox(space-between, center);
-	height: 981px;
+	@include box(100%, 981px);
 	max-width: 539px;
-	width: 100%;
 	padding: 58px 48px 37px 48px;
 	border-radius: 40px;
 	transition: all 0.3s ease-in;
@@ -14,20 +13,12 @@
 	}
 	.textWrapper {
 		@include flexbox(center, center, 36px);
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 117%;
+		@include text-styles(24px, 117%, $text-main, 400, left);
 		letter-spacing: 0.01em;
-		text-align: center;
-		color: $text-color;
-		text-align: left;
 
 		.title {
+			@include text-styles(36px, 122%, $black, 300);
 			margin: 0;
-			font-weight: 300;
-			font-size: 36px;
-			line-height: 122%;
-			color: black;
 			cursor: default;
 		}
 		.advantages {
@@ -42,10 +33,10 @@
 			}
 
 			.itemAdv {
+				@include flexbox(flex-start, center, 12px, row);
 				list-style: none;
 				//	white-space: nowrap;
 				margin-bottom: 20px;
-				@include flexbox(flex-start, center, 12px, row);
 				cursor: default;
 				&::before {
 					content: url('/landing/done.svg');
@@ -59,21 +50,14 @@
 		width: 100%;
 
 		.btn {
-			font-weight: 500;
-			font-size: 28px;
-			line-height: 100%;
+			@include text-styles(28px, 100%, $white, 500);
 			letter-spacing: 0.01em;
-			text-align: center;
-			color: #fff;
 			padding: 24px;
 		}
 		.bottomText {
-			font-weight: 400;
-			font-size: 24px;
-			line-height: 117%;
+			@include text-styles(24px, 117%, rgba(70, 74, 78, 0.6), 400);
 			letter-spacing: 0.01em;
 			text-align: center;
-			color: rgba(70, 74, 78, 0.6);
 			cursor: default;
 		}
 	}

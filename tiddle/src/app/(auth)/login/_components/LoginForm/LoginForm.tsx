@@ -21,7 +21,6 @@ export function LoginForm() {
 		formState: { errors }
 	} = useForm<Inputs>();
 	const router = useRouter();
-	const pathname = usePathname();
 	const searchParams = useSearchParams();
 	const onSubmit = async (data: Inputs) => {
 		const result = await signIn('credentials', {

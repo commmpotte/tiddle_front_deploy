@@ -8,11 +8,11 @@
 
 		.remember {
 			@include flexbox(flex-start, center, 8px, row);
-			@include text-styles(14px, normal, $secondary-text, $font-weight: 400);
+			@include text-styles(14px, normal, $text-secondary, $font-weight: 400);
 
 			input[type='checkbox'] {
 				@include box(20px, 20px);
-				@include rounded-border(4px, 2px, solid, $border-checkbox-color);
+				@include rounded-border(4px, 2px, solid, $main-colour-tint);
 				appearance: none;
 				-webkit-appearance: none;
 				-moz-appearance: none;
@@ -20,12 +20,17 @@
 			}
 
 			input[type='checkbox']:checked {
-				background-color: $border-checkbox-color;
-				border-color: $active-color;
+				background-color: $main-colour-tint;
+				border-color: $main-colour-elements;
 			}
 		}
 		.link {
-			@include text-styles(14px, normal, $active-color, $font-weight: 400);
+			@include text-styles(
+				14px,
+				normal,
+				$main-colour-elements,
+				$font-weight: 400
+			);
 			text-decoration: none;
 		}
 	}

@@ -15,9 +15,9 @@
 	$font-size,
 	$line-height,
 	$color,
-	$font-family: 'SF Pro Display',
 	$font-weight: normal,
-	$text-align: center
+	$text-align: center,
+	$font-family: 'SF Pro Display'
 ) {
 	font-size: $font-size;
 	line-height: $line-height;
@@ -41,4 +41,19 @@
 @mixin box($width, $height: $width) {
 	width: $width;
 	height: $height;
+}
+
+@mixin grid($columns, $rows, $gap: 0, $justify: static, $align: static) {
+	display: grid;
+	grid-template-columns: $columns;
+	grid-template-rows: $rows;
+	grid-gap: $gap;
+	justify-items: $justify;
+	align-items: $align;
+}
+
+@mixin gridContainer($align: center, $justify, $column: 1) {
+	grid-column: $column;
+	align-self: $align;
+	justify-self: $justify;
 }

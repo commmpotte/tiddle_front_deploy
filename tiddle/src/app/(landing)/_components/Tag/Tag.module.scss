@@ -1,10 +1,5 @@
 .tag {
-	border: 2px solid $active-color;
-	border-radius: 60px;
+	@include text-styles(28px, 129%, $main-colour-elements, 400);
+	@include rounded-border(60px, 2px, solid, $main-colour-elements);
 	padding: 8px 24px;
-	font-weight: 400;
-	font-size: 28px;
-	line-height: 129%;
-	color: $active-color;
-	text-align: center;
 }

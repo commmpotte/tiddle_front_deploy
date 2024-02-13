@@ -7,11 +7,8 @@
 		height: auto;
 	}
 	.headerText {
-		width: 100%;
+		@include text-styles(28px, 129%, $text-main, 400);
 		@include flexbox(space-between, center, 20px, row);
-		font-weight: 400;
-		font-size: 28px;
-		line-height: 129%;
-		color: $text-color;
+		width: 100%;
 	}
 }

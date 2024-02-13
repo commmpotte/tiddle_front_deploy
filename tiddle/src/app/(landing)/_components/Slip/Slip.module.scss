@@ -1,8 +1,5 @@
 .slip {
-	font-weight: 400;
-	font-size: 36px;
-	line-height: 133%;
-	color: $black;
+	@include text-styles(36px, 133%, $black, 400);
 	border-radius: 40px;
 	padding: 48px 56px;
 	box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);

@@ -6,19 +6,13 @@
 		@include flexbox(center, center, 20px, column);
 	}
 	.title {
-		font-weight: 400;
-		font-size: 48px;
-		text-align: center;
-		color: $text-color;
+		@include text-styles(48px, 100%, $text-main, 400);
 		margin: 0;
 		padding: 0;
 	}
 
 	.secondary {
-		font-weight: 400;
-		font-size: 32px;
-		text-align: center;
-		color: $secondary-text;
+		@include text-styles(32px, 100%, $text-secondary, 400);
 	}
 
 	.slipsWrapper {
@@ -29,10 +23,7 @@
 		@include flexbox(center, center, 24px, column);
 
 		.titleH3 {
-			font-weight: 400;
-			font-size: 36px;
-			text-align: center;
-			color: $text-color;
+			@include text-styles(36px, 100%, $text-main, 400);
 			margin: 0;
 			padding: 0;
 		}

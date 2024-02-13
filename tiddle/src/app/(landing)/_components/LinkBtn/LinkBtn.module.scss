@@ -4,49 +4,44 @@
 	border: none;
 	letter-spacing: 0.2px;
 	padding: 8px 24px;
-	background: $active-color;
+	background: $main-colour-elements;
 	text-decoration: none;
 	white-space: nowrap;
 	transition: all 0.4s ease;
 	&:hover {
-		background: $button-hover-color;
+		background: $hover;
 	}
 
 	&:focus {
-		background-color: $clicked-color;
+		background-color: $button-click;
 	}
 }
 
 .social {
 	@include flexbox(center, center, row);
+	@include box(94px, 94px);
 	box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
-	//padding: 15px;
-
-	width: 94px;
-	height: 94px;
 	background: $white;
 	border-radius: 100px;
 	border: none;
+
 	transition: all 0.4s ease;
 
 	&:hover {
-		background: $gender-border-color;
+		background: $stroke-colour;
 	}
 }
 
 .design {
+	@include text-styles(24px, 183%, $black, $font-weight: 300);
 	box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.2);
 	background: $white;
-	font-weight: 300;
-	font-size: 24px;
-	line-height: 183%;
-	color: $black;
 	border-radius: 40px;
 	padding: 12px 32px;
 	&:hover {
-		background: $gender-border-color;
+		background: $stroke-colour;
 	}
 	&:focus {
-		background-color: $active-color;
+		background-color: $main-colour-elements;
 	}
 }

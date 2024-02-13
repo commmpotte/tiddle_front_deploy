@@ -1,12 +1,10 @@
 .titleWrapper {
-	//@include flexbox(space-between, center, 0px, row);
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	@include grid(1fr 1fr, auto);
 	width: 100%;
 	margin-bottom: 64px;
 
 	.phones {
-		flex: 1 0 50%;
+		//flex: 1 0 50%;
 		max-width: 100%;
 		position: relative;
 		width: 100%;
@@ -15,16 +13,10 @@
 		.imgPhones {
 			max-width: 100%;
 			height: auto;
-			// position: absolute;
-			// left: 70px;
-			// top: -101px;
-			// z-index: 0;
 		}
 	}
 	.title {
-		display: grid;
-		grid-template-columns: [start] 1fr [mid] 1.5fr [end];
-		grid-template-rows: auto auto auto;
+		@include grid([start] 1fr [mid] 1.5fr [end], auto auto auto, 0);
 		grid-row-gap: 64px;
 		position: relative;
 
@@ -32,25 +24,20 @@
 			grid-column: start / end;
 		}
 		.tag {
-			align-self: baseline;
-			justify-self: baseline;
+			@include gridContainer(baseline, baseline, start / mid);
 		}
 	}
 	.btnWrapper {
 		position: relative;
 
 		.button {
-			font-weight: 500 !important;
-			font-size: 28px !important;
-			line-height: 100% !important;
+			@include text-styles(28px, 100%, $white, 500);
 			letter-spacing: 0.01em !important;
-			text-align: center !important;
 		}
 		.fire {
+			@include box(37px, 37px);
 			position: absolute;
 			border-radius: 100px;
-			width: 37px;
-			height: 37px;
 			padding: 11px;
 			box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
 			background: $white;

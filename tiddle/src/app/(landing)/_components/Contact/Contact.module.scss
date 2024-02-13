@@ -16,20 +16,15 @@
 			@include flexbox(center, center, 32px);
 
 			.title {
-				font-weight: 300;
-				font-size: 36px;
-				line-height: 122%;
+				@include text-styles(36px, 122%, $black, 300);
 				margin: 0;
 				padding: 0;
-				color: $black;
 			}
 
 			.email {
-				font-weight: 500;
-				font-size: 24px;
+				@include text-styles(24px, 100%, #909295, 400);
 				text-decoration: underline;
 				text-decoration-skip-ink: none;
-				color: #909295;
 			}
 		}
 		.links {

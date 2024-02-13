@@ -19,7 +19,7 @@
 	}
 	.wrapper {
 		@include flexbox(center, center, 27px);
-		@include text-styles(14px, normal, $secondary-text, $font-weight: 400);
+		@include text-styles(14px, normal, $text-secondary, $font-weight: 400);
 		width: 100%;
 		padding: 0 20px 30px 20px;
 		background: $white;
@@ -27,7 +27,12 @@
 		z-index: 100;
 
 		.link {
-			@include text-styles(14px, normal, $active-color, $font-weight: 400);
+			@include text-styles(
+				14px,
+				normal,
+				$main-colour-elements,
+				$font-weight: 400
+			);
 			text-decoration: none;
 		}
 

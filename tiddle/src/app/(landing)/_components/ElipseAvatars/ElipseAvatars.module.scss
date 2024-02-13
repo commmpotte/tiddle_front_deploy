@@ -1,23 +1,16 @@
 .wrapper {
-	display: grid;
-	grid-template-columns: [start] 1fr [mid] 1fr [end];
-	grid-template-rows: auto auto auto auto 1fr;
+	@include grid([start] 1fr [mid] 1fr [end], auto auto auto auto 1fr, 10px);
 	position: relative;
 	width: 100%;
-	gap: 10px;
 	margin-bottom: 154px;
 
 	.slip {
-		grid-column: start / end;
+		@include gridContainer(center, flex-start, start / end);
+		@include text-styles(36px, 133%, $text-main, 400);
 		white-space: wrap;
-		font-weight: 400;
-		font-size: 36px;
-		line-height: 133%;
 		z-index: 10;
-		justify-self: flex-start;
 		&:nth-child(even) {
-			grid-column: start / end;
-			justify-self: flex-end;
+			@include gridContainer(center, flex-end, start / end);
 		}
 
 		&:nth-child(2) {
@@ -36,8 +29,7 @@
 			max-width: 340px;
 		}
 		&:last-child {
-			grid-column: mid / end;
-			justify-self: flex-start;
+			@include gridContainer(center, flex-start, mid / end);
 			max-width: 354px;
 			margin-top: 174px;
 		}

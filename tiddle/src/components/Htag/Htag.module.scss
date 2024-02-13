@@ -2,7 +2,7 @@
 	@include text-styles(
 		34px,
 		80%,
-		$text-color,
+		$text-main,
 		$font-family: 'eurofurence',
 		$font-weight: 400
 	);
@@ -12,7 +12,7 @@
 		@include text-styles(
 			48px,
 			80%,
-			$text-color,
+			$text-main,
 			$font-family: 'eurofurence',
 			$font-weight: 500
 		);
@@ -20,7 +20,7 @@
 }
 
 .h2 {
-	@include text-styles(28px, 32px, $text-color, $font-weight: 500);
+	@include text-styles(28px, 32px, $text-main, $font-weight: 500);
 	margin: 0;
 	margin-top: 20px;
 }
@@ -29,7 +29,7 @@
 }
 
 .text {
-	color: $text-color;
+	color: $text-main;
 }
 
 .primary {
