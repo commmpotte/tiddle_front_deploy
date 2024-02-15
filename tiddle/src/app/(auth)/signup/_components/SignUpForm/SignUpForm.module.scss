@@ -6,7 +6,12 @@
 		@include flexbox(space-between, center, row);
 
 		.link {
-			@include text-styles(14px, normal, $active-color, $font-weight: 400);
+			@include text-styles(
+				14px,
+				normal,
+				$main-colour-elements,
+				$font-weight: 400
+			);
 			text-decoration: none;
 		}
 	}

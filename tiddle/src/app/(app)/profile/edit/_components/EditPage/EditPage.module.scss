@@ -11,7 +11,7 @@
 			@include text-styles(
 				16px,
 				20px,
-				$text-color,
+				$text-main,
 				$font-weight: 700,
 				$text-align: left
 			);
@@ -33,7 +33,7 @@
 				@include text-styles(
 					12px,
 					16px,
-					$secondary-text,
+					$text-secondary,
 					$font-weight: 500,
 					$text-align: left
 				);
@@ -41,7 +41,7 @@
 
 				input {
 					@include box(24px, 24px);
-					@include rounded-border(50%, 2px, solid, $gender-border-color);
+					@include rounded-border(50%, 2px, solid, $stroke-colour);
 					-webkit-appearance: none;
 					-moz-appearance: none;
 					appearance: none;
@@ -51,7 +51,7 @@
 					position: relative;
 					top: 4px;
 					&:checked {
-						border: 7px solid $border-checkbox-color;
+						border: 7px solid $main-colour-tint;
 						outline: unset !important; /* I added this one for Edge (chromium) support */
 					}
 				}

@@ -1,5 +1,7 @@
+// @import '../../styles/mixins';
+// @import '../../styles/variables';
 .button {
-	@include text-styles(20px, 28px,  $white, $font-weight: 400);
+	@include text-styles(20px, 28px, $white, $font-weight: 400);
 	border-radius: 20px;
 	border: none;
 	letter-spacing: 0.2px;
@@ -7,22 +9,22 @@
 	width: 100%;
 
 	&:hover {
-		background: $button-hover-color;
+		background: $hover;
 	}
 
 	&:focus {
-		background-color: $clicked-color;
+		background-color: $button-click;
 	}
 }
 .active {
-	background: $active-color;
+	background: $main-colour-elements;
 }
 
 .disabled {
-	background: $active-color;
+	background: $main-colour-elements;
 	opacity: 0.4;
 }
 
 .clicked {
-	background-color: $clicked-color;
+	background-color: $button-click;
 }

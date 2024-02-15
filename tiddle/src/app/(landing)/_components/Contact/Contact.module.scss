@@ -1,0 +1,37 @@
+.wrapperContact {
+	@include flexbox(center, center, 64px);
+	.wrapper {
+		@include flexbox(center, center, 64px);
+		padding: 64px 100px;
+		box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+		border-radius: 40px;
+
+		.avatar {
+			border-radius: 60px;
+			box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+			padding: 7px 11px;
+		}
+
+		.infoWrapper {
+			@include flexbox(center, center, 32px);
+
+			.title {
+				@include text-styles(36px, 122%, $black, 300);
+				margin: 0;
+				padding: 0;
+			}
+
+			.email {
+				@include text-styles(24px, 100%, #909295, 400);
+				text-decoration: underline;
+				text-decoration-skip-ink: none;
+			}
+		}
+		.links {
+			@include flexbox(center, center, 64px, row);
+		}
+		.socialWrapper {
+			@include flexbox(center, center, 64px, row);
+		}
+	}
+}

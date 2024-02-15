@@ -1,0 +1,66 @@
+.titleWrapper {
+	@include grid(1fr 1fr, auto);
+	width: 100%;
+	margin-bottom: 64px;
+
+	.phones {
+		//flex: 1 0 50%;
+		align-self: flex-end;
+		justify-self: flex-end;
+		max-width: 100%;
+		position: relative;
+		width: 100%;
+		margin-left: 90px;
+		margin-top: 1px;
+		z-index: -1;
+
+		.imgPhones {
+			max-width: 100%;
+			// height: auto;
+		}
+	}
+	.title {
+		@include grid([start] 1fr [mid] 1.5fr [end], auto auto auto, 0);
+		grid-row-gap: 64px;
+		position: relative;
+
+		.titleText {
+			grid-column: start / end;
+		}
+		.tag {
+			@include gridContainer(baseline, baseline, start / mid);
+		}
+
+
+		@include descktop1440 {
+			@include grid([start] 1fr [mid] 1fr [end], auto auto auto, 0);
+			grid-row-gap: 64px;
+		}
+
+		@include descktop1200 {
+			@include grid([start] 2fr [mid] 1fr [end], auto auto auto, 0);
+			grid-row-gap: 64px;
+		}
+	}
+	.btnWrapper {
+		position: relative;
+
+		.button {
+			@include text-styles(28px, 100%, $white, 500);
+			letter-spacing: 0.01em !important;
+		}
+		.fire {
+			@include box(37px, 37px);
+			position: absolute;
+			border-radius: 100px;
+			padding: 11px;
+			box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+			background: $white;
+			right: -32px;
+			top: -32px;
+		}
+		@include descktop1440 {
+			grid-column: start / mid;
+		}
+	}
+}

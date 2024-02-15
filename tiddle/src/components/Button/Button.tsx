@@ -12,7 +12,7 @@ export function Button({
 		<button
 			className={classNames(styles.button, className, {
 				[styles.active]: status === 'active',
-				[styles.disabled]: status === 'disabled',
+				[styles.disabled]: status === 'disabled'
 			})}
 			{...props}
 		>

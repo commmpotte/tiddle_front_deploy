@@ -3,7 +3,7 @@
 	width: 100%;
 
 	.label {
-		@include text-styles(16px, 20px, $text-color, $font-weight: 700);
+		@include text-styles(16px, 20px, $text-main, $font-weight: 700);
 		letter-spacing: 0.2px;
 		font-feature-settings: 'clig' off, 'liga' off;
 	}
@@ -11,7 +11,7 @@
 		@include text-styles(
 			22px,
 			22px,
-			$primary-text-color,
+			$black,
 			$font-weight: 500,
 			$text-align: left
 		);
@@ -21,21 +21,21 @@
 		padding: 20px;
 
 		&:hover {
-			@include rounded-border(20px, 2px, solid, $hover-color);
+			@include rounded-border(20px, 2px, solid, $violet);
 		}
 		&:focus {
 			outline: none;
-			@include rounded-border(20px, 2px, solid, $active-color);
+			@include rounded-border(20px, 2px, solid, $main-colour-elements);
 		}
 	}
 
 	.error {
-		@include rounded-border(20px, 2px, solid, $reject-color);
+		@include rounded-border(20px, 2px, solid, $red);
 	}
 
 	@include desktop {
 		.label {
-			@include text-styles(22px, 22px, $secondary-text, $font-weight: 400);
+			@include text-styles(22px, 22px, $text-secondary, $font-weight: 400);
 		}
 	}
 }

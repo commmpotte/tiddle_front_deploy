@@ -1,0 +1,12 @@
+@import '../src/styles/variables';
+@import '../src/styles/mixins';
+
+body {
+	font-family: 'SF Pro Display';
+	background: $background-color;
+	margin: 0 auto;
+}
+
+* {
+	font-family: 'SF Pro Display';
+}

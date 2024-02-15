@@ -6,7 +6,7 @@ import Link from 'next/link';
 import styles from './LoginForm.module.scss';
 import { useForm } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import toast from 'react-hot-toast';
 
 type Inputs = {
@@ -21,6 +21,7 @@ export function LoginForm() {
 		formState: { errors }
 	} = useForm<Inputs>();
 	const router = useRouter();
+	const searchParams = useSearchParams();
 	const onSubmit = async (data: Inputs) => {
 		const result = await signIn('credentials', {
 			username: data.username,
@@ -28,7 +29,8 @@ export function LoginForm() {
 			redirect: false
 		});
 		if (result && !result.error) {
-			router.push('/');
+			const callback = searchParams.get('callbackUrl');
+			router.push(callback ? callback : '/');
 		} else if (result?.error) {
 			toast.error(result?.error);
 			setError('username', { type: 'error', message: result.error });
@@ -57,6 +59,7 @@ export function LoginForm() {
 				})}
 				placeholder="********"
 				label="Password"
+				type="password"
 				error={errors.password}
 			/>
 			<div className={styles.wrapperRemember}>

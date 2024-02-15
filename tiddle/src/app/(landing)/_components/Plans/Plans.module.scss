@@ -1,0 +1,15 @@
+.wrapper {
+	@include flexbox(center, flex-start, 64px);
+	width: 100%;
+	.cardsWrapper {
+		@include grid(1fr 1fr 1fr, auto, 40px);
+		margin-bottom: 263px;
+		//@include flexbox(space-between, center, 40px, row);
+		width: 100%;
+
+		@include descktop1200 {
+			@include grid([start] 1fr 1fr [end], 1fr auto, 32px);
+			width: 100%;
+		}
+	}
+}

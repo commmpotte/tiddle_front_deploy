@@ -3,14 +3,15 @@
 	flex-wrap: wrap;
 
 	.input {
-		@include text-styles(16px, 20px, $text-color, $font-weight: 400);
+		@include text-styles(16px, 20px, $text-main, $font-weight: 400);
 		@include box(34px, 44px);
-		@include rounded-border(4px, 1px, solid, $border-checkbox-color);
+		@include rounded-border(4px, 1px, solid, $main-colour-tint);
 
-		&:focus, &:hover {
+		&:focus,
+		&:hover {
 			outline: 0;
-			box-shadow: 0px 0px 5px $border-checkbox-color; 
-			border: 1px solid $border-checkbox-color; 
+			box-shadow: 0px 0px 5px $main-colour-tint;
+			border: 1px solid $main-colour-tint;
 		}
 	}
 }

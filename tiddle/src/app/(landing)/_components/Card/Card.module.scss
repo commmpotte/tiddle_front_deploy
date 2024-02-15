@@ -1,0 +1,79 @@
+.wrapper {
+	@include flexbox(space-between, center);
+	height: 981px;
+	//	max-width: 539px;
+	padding: 58px 48px 37px 48px;
+	border-radius: 40px;
+	background: $white;
+	transition: all 0.3s ease-in;
+	.imgType {
+		box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+		border-radius: 100px;
+		padding: 28px;
+	}
+	.textWrapper {
+		@include flexbox(center, center, 36px);
+		@include text-styles(24px, 117%, $text-main, 400, left);
+		letter-spacing: 0.01em;
+
+		.title {
+			@include text-styles(36px, 122%, $black, 300);
+			margin: 0;
+			cursor: default;
+		}
+		.advantages {
+			margin: 0;
+			padding: 0;
+
+			.extend {
+				@include flexbox(flex-start, center, 12px, row);
+				list-style: none;
+				margin-bottom: 20px;
+				cursor: default;
+			}
+
+			.itemAdv {
+				@include flexbox(flex-start, center, 12px, row);
+				list-style: none;
+				//	white-space: nowrap;
+				margin-bottom: 20px;
+				cursor: default;
+				&::before {
+					content: url('/landing/done.svg');
+				}
+			}
+		}
+	}
+
+	.bottomCard {
+		@include flexbox(center, center, 24px);
+		width: 100%;
+
+		.btn {
+			@include text-styles(28px, 100%, $white, 500);
+			letter-spacing: 0.01em;
+			padding: 24px;
+		}
+		.bottomText {
+			@include text-styles(24px, 117%, rgba(70, 74, 78, 0.6), 400);
+			letter-spacing: 0.01em;
+			text-align: center;
+			cursor: default;
+		}
+	}
+
+	&:hover {
+		box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+	}
+}
+
+.active {
+	box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+}
+
+@include descktop1200 {
+	.premium {
+		grid-column: start / end;
+		//	width: 100%;
+	}
+}

@@ -1,0 +1,65 @@
+.wrapper {
+	@include grid([start] 1fr [mid] 1fr [end], auto auto auto auto 1fr, 10px);
+	position: relative;
+	width: 100%;
+	margin-bottom: 154px;
+
+	.slip {
+		@include gridContainer(center, flex-start, start / end);
+		@include text-styles(36px, 133%, $text-main, 400);
+		white-space: wrap;
+		z-index: 10;
+		&:nth-child(even) {
+			@include gridContainer(center, flex-end, start / end);
+		}
+
+		&:nth-child(2) {
+			max-width: 360px;
+		}
+		&:nth-child(3) {
+			margin-top: -100px;
+			max-width: 435px;
+			@include descktop1440 {
+				margin-top: 0;
+			}
+		}
+		&:nth-child(4) {
+			margin-top: 36px;
+			max-width: 405px;
+			@include descktop1440 {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(5) {
+			max-width: 340px;
+		}
+		&:last-child {
+			@include gridContainer(center, flex-start, mid / end);
+			max-width: 354px;
+			margin-top: 174px;
+
+			@include descktop1440 {
+				@include gridContainer(center, center, start / end);
+			}
+			@include descktop1200 {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.avatars {
+	@include flexbox(center, flex-start, 79px);
+	width: 100%;
+}

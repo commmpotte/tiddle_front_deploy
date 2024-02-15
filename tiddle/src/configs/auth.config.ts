@@ -1,4 +1,4 @@
-import { AuthApi } from '@/api/auth.api';
+import { $fetch } from '@/api/api.fetch';
 import { pathAPI } from '@/helps/pathAPI.help';
 import { isApiError } from '@/types/interfaces/error.interface';
 import { JwtToken } from '@/types/interfaces/jwt.interface';
@@ -15,34 +15,40 @@ type TokenJwtType = {
 	jti: string;
 };
 
-const authMaxAge = 15;
+const authMaxAge = 5;
 async function refreshAccessToken(token: JwtToken) {
 	try {
-		const response = await fetch(
-			process.env.NEXT_PUBLIC_DJANGO_HOST + pathAPI.auth.refresh,
-			{
-				method: 'POST',
-				body: JSON.stringify({
-					refresh: token.refresh
-				}),
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			}
+		const data = await $fetch.post<JwtToken>(
+			pathAPI.auth.refresh,
+			token,
+			true,
+			{},
+			token.refresh
 		);
-		const refreshedTokens: JwtToken = await response.json();
+		// const response = await fetch(
+		// 	process.env.NEXT_PUBLIC_DJANGO_HOST + pathAPI.auth.refresh,
+		// 	{
+		// 		method: 'POST',
+		// 		body: JSON.stringify({
+		// 			refresh: token.refresh
+		// 		}),
+		// 		headers: {
+		// 			'Content-Type': 'application/json'
+		// 		}
+		// 	}
+		// );
 
-		if (!response.ok) {
-			throw refreshedTokens;
-		}
+		// if (!response.ok) {
+		// 	throw refreshedTokens;
+		// }
 		const currentDate = new Date();
 		return {
 			...token,
-			access: refreshedTokens.access,
+			access: data.access,
 			accessTokenExpires: currentDate.setMinutes(
 				currentDate.getMinutes() + authMaxAge
 			),
-			refresh: refreshedTokens.refresh ?? token.refresh
+			refresh: data.refresh ?? token.refresh
 		};
 	} catch (error) {
 		if (isApiError(error)) {
@@ -64,16 +70,13 @@ export const authConfig: AuthOptions = {
 					if (!credentials?.username || !credentials?.password) {
 						return null;
 					}
-					const currentUser = await AuthApi({
-						username: credentials.username,
-						password: credentials.password
-					});
-					if (currentUser.error) {
-						throw new Error(currentUser.error.message);
-					}
+					const data = await $fetch.post<JwtToken>(
+						pathAPI.auth.login,
+						credentials
+					);
 					return {
-						access: currentUser.access,
-						refresh: currentUser.refresh
+						access: data.access,
+						refresh: data.refresh
 					} as User;
 				} catch (error) {
 					if (isApiError(error)) {
@@ -85,7 +88,9 @@ export const authConfig: AuthOptions = {
 		})
 	],
 	pages: {
-		signIn: '/login'
+		signIn: '/login',
+		error: '',
+		newUser: '/signup'
 	},
 	session: {
 		strategy: 'jwt'

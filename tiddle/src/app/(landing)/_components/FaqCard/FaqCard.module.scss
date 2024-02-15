@@ -1,0 +1,38 @@
+.faq {
+	background: $white;
+	border-radius: 40px;
+	padding: 24px 31px 32px 31px;
+	cursor: pointer;
+
+	.faqControl {
+		@include flexbox(flex-start, center, 20px, row);
+		width: 100%;
+	}
+	&:hover {
+		box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+	}
+
+	.question {
+		box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+		border-radius: 100px;
+		padding: 11px;
+	}
+	.text {
+		@include text-styles(28px, 129%, $text-main, 500);
+		letter-spacing: 0.01em;
+	}
+	.arrow {
+		box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
+		border-radius: 100px;
+		padding: 7px;
+		margin-left: auto;
+	}
+	.faqDescription {
+		@include text-styles(28px, 129%, $text-main, 400, left);
+		letter-spacing: 0.01em;
+	}
+}
+
+.active {
+	box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+}

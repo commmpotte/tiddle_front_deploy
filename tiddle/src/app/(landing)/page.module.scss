@@ -1,0 +1,96 @@
+.main {
+	//	padding: 55px 60px;
+	@include flexbox(center, center, 0, column);
+	box-sizing: border-box;
+	margin: 0 auto;
+	width: 100%;
+	overflow-y: scroll;
+	min-height: 400px;
+
+	.wrapper {
+		@include flexbox(center, center, 0, column);
+		padding: 55px 60px;
+		box-sizing: border-box;
+		margin: 0 auto;
+		max-width: 1920px;
+		width: 100%;
+
+		@include descktop1440 {
+			padding: 55px 50px;
+		}
+	}
+	.wrapperBottom {
+		padding: 55px 110px;
+		@include flexbox(center, center, 0, column);
+		box-sizing: border-box;
+		margin: 0 auto;
+		max-width: 1920px;
+		width: 100%;
+
+		@include descktop1440 {
+			padding: 55px 50px;
+		}
+	}
+
+	.hditWrapper {
+		position: relative;
+		background-color: #9251ff;
+		background-image: url('/landing/backgroundHowDoesItWork.svg');
+		background-repeat: no-repeat;
+		background-position: top left 100%;
+		width: 100%;
+		max-width: 1920px;
+		margin-bottom: 195px;
+
+		//max-width: 100% !important;
+
+		.bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 10;
+			max-width: 100%;
+			height: auto;
+		}
+		.tests {
+			@include grid([start] 1fr 1fr [end], auto auto);
+			z-index: 100;
+			margin-top: 268px;
+
+			.tag {
+				@include gridContainer(baseline, baseline, start / end);
+				color: $white;
+				border: 2px solid $white;
+				background: #9251ff;
+			}
+			.quiz {
+				@include gridContainer(center, flex-end, 1);
+				max-width: 100%;
+				height: auto;
+			}
+
+			.iphone {
+				@include gridContainer(center, center, 2);
+				width: 100%;
+				margin-right: 300px;
+
+				img {
+					max-width: 100%;
+					height: auto;
+					// margin-left: -100px;
+				}
+			}
+		}
+	}
+}
+
+.progressBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 10px;
+	background: $main-colour-elements;
+	transform-origin: 0%;
+	z-index: 10000;
+}

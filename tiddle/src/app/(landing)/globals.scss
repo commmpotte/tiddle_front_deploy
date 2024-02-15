@@ -1,0 +1,29 @@
+@import '@/styles/variables';
+
+body {
+	background: $background-color;
+	margin: 0 auto;
+}
+
+* {
+	font-family: 'SF Pro Display';
+}
+html {
+	scroll-behavior: smooth !important;
+}
+*::-webkit-scrollbar {
+	width: 6px; /* Ширина скроллбара */
+}
+
+*::-webkit-scrollbar-track {
+	background: $white; /* Цвет фона трека скроллбара */
+}
+
+*::-webkit-scrollbar-thumb {
+	background: $grey; /* Цвет ползунка скроллбара */
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: $black; /* Цвет ползунка скроллбара при наведении */
+}

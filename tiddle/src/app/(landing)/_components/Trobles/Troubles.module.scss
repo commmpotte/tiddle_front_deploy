@@ -1,0 +1,35 @@
+.wrapper {
+	@include flexbox(center, center, 86px, column);
+	margin-top: 91px;
+	margin-bottom: 142px;
+	.titleWrapper {
+		@include flexbox(center, center, 20px, column);
+	}
+	.title {
+		@include text-styles(48px, 100%, $text-main, 400);
+		margin: 0;
+		padding: 0;
+	}
+
+	.secondary {
+		@include text-styles(32px, 100%, $text-secondary, 400);
+	}
+
+	.slipsWrapper {
+		@include flexbox(center, center, 84px, row);
+		flex-wrap: wrap;
+
+		@include descktop1440 {
+			gap: 32px;
+		}
+	}
+	.bottomTextWrapper {
+		@include flexbox(center, center, 24px, column);
+
+		.titleH3 {
+			@include text-styles(36px, 100%, $text-main, 400);
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

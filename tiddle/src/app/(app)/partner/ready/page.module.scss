@@ -9,7 +9,7 @@
 		width: 100%;
 		.avatar {
 			@include flexbox(center, center);
-			@include text-styles(20px, 80%, $text-color, $font-weight: 500);
+			@include text-styles(20px, 80%, $text-main, $font-weight: 500);
 			border-radius: 80px;
 			background: $white;
 			box-shadow: 0 4px 29px 5px rgba(200, 185, 230, 0.15);

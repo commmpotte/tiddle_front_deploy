@@ -17,7 +17,7 @@
 	.btnDialog {
 		background: none;
 		border: none;
-		@include text-styles(16px, 125%, $active-color, $font-weight: 400);
+		@include text-styles(16px, 125%, $main-colour-elements, $font-weight: 400);
 	}
 }
 

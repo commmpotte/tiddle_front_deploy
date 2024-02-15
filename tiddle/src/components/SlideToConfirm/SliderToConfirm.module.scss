@@ -4,7 +4,7 @@
 	@include flexbox(center, center);
 
 	border-radius: 20px;
-	background-color: $border-checkbox-color;
+	background-color: $main-colour-tint;
 	position: relative;
 	will-change: transform;
 
@@ -13,7 +13,7 @@
 		@include flexbox(center, center, 0, row);
 		position: absolute;
 		left: 0;
-		background: $active-color;
+		background: $main-colour-elements;
 		border-radius: 20px;
 		cursor: pointer;
 	}

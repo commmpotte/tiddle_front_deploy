@@ -1,0 +1,5 @@
+.tag {
+	@include text-styles(28px, 129%, $main-colour-elements, 400);
+	@include rounded-border(60px, 2px, solid, $main-colour-elements);
+	padding: 8px 24px;
+}
