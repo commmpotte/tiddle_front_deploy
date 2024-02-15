@@ -1,6 +1,6 @@
 FROM node:20.6.1
 WORKDIR /opt/app
-RUN cd /tiddle/
+RUN cd tiddle/
 ADD package.json package.json
 RUN npm install
 ADD . .
