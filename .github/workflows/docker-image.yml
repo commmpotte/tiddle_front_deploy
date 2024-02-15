@@ -30,8 +30,9 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
-          key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
+          password: ${{ secrets.PASSWORD }}
+          # key: ${{ secrets.SSH_KEY }}
+          # passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull docker.pkg.github.com/tiddleme/tiddleFrontend/tiddleFrontend:latest
             sudo docker-compose stop
