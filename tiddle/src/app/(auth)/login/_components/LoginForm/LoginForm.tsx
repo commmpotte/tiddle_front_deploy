@@ -6,7 +6,7 @@ import Link from 'next/link';
 import styles from './LoginForm.module.scss';
 import { useForm } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import toast from 'react-hot-toast';
 
 type Inputs = {

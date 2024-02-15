@@ -14,6 +14,7 @@ class FetchClient {
 
 	async post<T>(
 		path: string,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		body?: Record<string, any>,
 		isAuth: boolean = false,
 		headers?: Record<string, string>,
@@ -24,6 +25,7 @@ class FetchClient {
 
 	async put<T>(
 		path: string,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		body?: Record<string, any>,
 		isAuth: boolean = false,
 		headers?: Record<string, string>,
@@ -43,6 +45,7 @@ class FetchClient {
 
 	async patch<T>(
 		path: string,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		body?: Record<string, any>,
 		isAuth: boolean = false,
 		headers?: Record<string, string>,
@@ -55,6 +58,7 @@ class FetchClient {
 		path: string,
 		method: string,
 		isAuth: boolean,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		body?: Record<string, any>,
 		headers?: Record<string, string>,
 		token?: string

@@ -1,7 +1,7 @@
 'use client';
 import { PanInfo, motion, useAnimation } from 'framer-motion';
 import styles from './SliderToConfirm.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 type Props = {
 	label: string;
@@ -11,7 +11,7 @@ let RIGHTS_OFFSET = 0;
 const START_POSITION = 110;
 export function SlideToConfirm({ label, onConfirm }: Props) {
 	const controls = useAnimation();
-	const componentRef = useRef(null);
+	const componentRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (componentRef.current) {
@@ -20,14 +20,14 @@ export function SlideToConfirm({ label, onConfirm }: Props) {
 		}
 	}, []);
 
-	const handleTouchStart = (event: any, info: PanInfo) => {
+	const handleTouchStart = (event: PointerEvent, info: PanInfo) => {
 		const x = info.offset.x;
 		if (x >= 0) {
 			controls.set({ x: x < RIGHTS_OFFSET ? x : RIGHTS_OFFSET });
 		}
 	};
 
-	const handleTouchEnd = (event: any, info: PanInfo) => {
+	const handleTouchEnd = (event: PointerEvent, info: PanInfo) => {
 		if (info.offset.x >= RIGHTS_OFFSET * 0.6) {
 			controls.set({ x: RIGHTS_OFFSET });
 			onConfirm();

@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 export function Title({
-	description,
 	textLink,
 	animateText,
 	className,
