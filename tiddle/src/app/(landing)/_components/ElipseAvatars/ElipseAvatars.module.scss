@@ -19,10 +19,16 @@
 		&:nth-child(3) {
 			margin-top: -100px;
 			max-width: 435px;
+			@include descktop1440 {
+				margin-top: 0;
+			}
 		}
 		&:nth-child(4) {
 			margin-top: 36px;
 			max-width: 405px;
+			@include descktop1440 {
+				margin-top: 0;
+			}
 		}
 
 		&:nth-child(5) {
@@ -32,6 +38,13 @@
 			@include gridContainer(center, flex-start, mid / end);
 			max-width: 354px;
 			margin-top: 174px;
+
+			@include descktop1440 {
+				@include gridContainer(center, center, start / end);
+			}
+			@include descktop1200 {
+				margin-top: 0;
+			}
 		}
 	}
 

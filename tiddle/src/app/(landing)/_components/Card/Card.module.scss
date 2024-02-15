@@ -1,11 +1,11 @@
 .wrapper {
 	@include flexbox(space-between, center);
-	@include box(100%, 981px);
-	max-width: 539px;
+	height: 981px;
+	//	max-width: 539px;
 	padding: 58px 48px 37px 48px;
 	border-radius: 40px;
+	background: $white;
 	transition: all 0.3s ease-in;
-	margin-bottom: 263px;
 	.imgType {
 		box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
 		border-radius: 100px;
@@ -69,4 +69,11 @@
 
 .active {
 	box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+}
+
+@include descktop1200 {
+	.premium {
+		grid-column: start / end;
+		//	width: 100%;
+	}
 }

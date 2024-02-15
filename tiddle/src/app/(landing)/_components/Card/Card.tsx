@@ -10,12 +10,13 @@ export function Card({
 	price,
 	extend,
 	secondaryText,
+	className,
 	...props
 }: CardProps) {
 	return (
 		<div
 			{...props}
-			className={classNames(styles.wrapper, {
+			className={classNames(styles.wrapper, className, styles[type], {
 				[styles.active]: active
 			})}
 		>

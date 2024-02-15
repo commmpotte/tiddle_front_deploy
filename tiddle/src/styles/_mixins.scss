@@ -38,6 +38,17 @@
 	}
 }
 
+@mixin descktop1440 {
+	@media screen and (max-width: 1440px) {
+		@content;
+	}
+}
+@mixin descktop1200 {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
 @mixin box($width, $height: $width) {
 	width: $width;
 	height: $height;

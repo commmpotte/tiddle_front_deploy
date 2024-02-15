@@ -16,7 +16,7 @@ export function Plans({ cards, tag, ...props }: PlanProps) {
 						advantages={card.advantages}
 						price={card.price}
 						extend={card.extend}
-					></Card>
+					/>
 				))}
 			</div>
 		</div>

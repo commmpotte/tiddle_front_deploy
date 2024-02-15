@@ -18,6 +18,10 @@
 	.slipsWrapper {
 		@include flexbox(center, center, 84px, row);
 		flex-wrap: wrap;
+
+		@include descktop1440 {
+			gap: 32px;
+		}
 	}
 	.bottomTextWrapper {
 		@include flexbox(center, center, 24px, column);

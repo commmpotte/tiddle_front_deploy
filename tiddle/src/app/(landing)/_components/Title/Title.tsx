@@ -57,9 +57,8 @@ export function Title({
 					</motion.div>
 					<span>
 						Evelate your love
-						<br /> everyday with
+						<br /> everyday with&nbsp;
 					</span>
-					&nbsp;
 					<span className={styles.link}>{textLink}</span>
 				</h1>
 			</AnimatePresence>

@@ -1,5 +1,5 @@
 .Htag {
-	@include text-styles(96px, 125%, $text-main, 400);
+	@include text-styles(96px, 125%, $text-main, 400, left);
 	margin: 0;
 	padding: 0;
 	white-space: nowrap;
@@ -11,5 +11,12 @@
 
 	.link {
 		color: $main-colour-elements;
+		@include descktop1200 {
+			display: block;
+		}
+	}
+
+	@include descktop1440 {
+		@include text-styles(84px, 114%, $text-main, 400, left);
 	}
 }
