@@ -39,7 +39,7 @@ jobs:
         with:
           push: true
           context: ./tiddle/
-          tags: tiddleme/tiddlefrontend:latest
+          tags: ramiras123/tiddlefrontend:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
           # key: ${{ secrets.SSH_KEY }}
           # passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull tiddleme/tiddlefrontend:latest
+            sudo docker pull ramiras123/tiddlefrontend:latest
             sudo docker-compose stop
             sudo docker-compose rm tiddle
             touch .env
