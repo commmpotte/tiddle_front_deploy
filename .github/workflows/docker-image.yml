@@ -56,7 +56,7 @@ jobs:
           script: |
             sudo docker pull ramiras123/tiddlefrontend:latest
             sudo docker-compose stop
-            sudo docker-compose rm tiddlefrontend
+            sudo docker-compose rm web
             touch .env
             echo NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }} >> .env
             echo NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }} >> .env
