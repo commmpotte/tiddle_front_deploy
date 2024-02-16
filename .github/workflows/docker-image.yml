@@ -52,7 +52,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            sudo -S docker pull ramiras123/tiddlefrontend:latest
-            sudo -S docker-compose stop
-            sudo -S docker-compose rm web
-            sudo -S docker-compose up -d
+            echo ${{ secrets.PASSWORD }} | sudo -S docker pull ramiras123/tiddlefrontend:latest
+            echo ${{ secrets.PASSWORD }} | sudo -S docker-compose stop
+            echo ${{ secrets.PASSWORD }} | sudo -S docker-compose rm web
+            echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d
