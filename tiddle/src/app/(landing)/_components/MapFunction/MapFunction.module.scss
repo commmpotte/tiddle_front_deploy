@@ -1,0 +1,43 @@
+.wrapper {
+	@include flexbox(center, center, 32px);
+	border-radius: 40px;
+	box-shadow: 0 20px 100px 0 rgba(117, 117, 117, 0.2);
+	background: $white;
+	padding: 57px 52px;
+	max-width: 584px;
+	box-sizing: border-box;
+	position: absolute;
+
+	.textWrapper {
+		@include flexbox(center, flex-start, 20px);
+
+		.title {
+			font-weight: 300;
+			font-size: 36px;
+			line-height: 122%;
+			color: #000;
+		}
+
+		.description {
+			font-weight: 400;
+			font-size: 28px;
+			line-height: 129%;
+			letter-spacing: 0.01em;
+			color: $text-main;
+		}
+	}
+
+	.wrapperBtn {
+		@include flexbox(center, center, 32px, row);
+
+		.numbers {
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 80%;
+			color: #fff;
+			background: $main-colour-elements;
+			border-radius: 40px;
+			padding: 26px 19px;
+		}
+	}
+}

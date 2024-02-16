@@ -178,5 +178,24 @@
 				"url": "#"
 			}
 		]
-	}
+	},
+
+	"features": [
+		{
+			"title": "AI conflict mediator",
+			"description": "The conflict mediator acts as a neutral side to the quarrel, helping the partners to talk it out, restore dialogue and emotional connection, as well as identify the roots of the conflict and reconcile."
+		},
+		{
+			"title": "Quizzes, tests and games",
+			"description": "Discover the strengths and weaknesses of your relationships and get to know yourself better with our exciting activities. Choose an activity topic you are interested in, for example, “sex”, “finance”, “holidays”."
+		},
+		{
+			"title": "Tasks and desires",
+			"description": "Get each other tasks and share what is valuable and necessary for you."
+		},
+		{
+			"title": "Mood tracker",
+			"description": "Keep a diary throughout the day to visualize changes in your and your partner’s emotions over any period. Show the status and reason for the change in mood. Stay in sync with your partner!"
+		}
+	]
 }

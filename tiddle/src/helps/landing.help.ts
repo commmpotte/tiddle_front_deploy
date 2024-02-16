@@ -15,6 +15,7 @@ export interface landingHelpProps {
 	plans: Plans;
 	faq: Faq[];
 	contact: Contact;
+	features: Features[];
 }
 
 export interface Trobles {
@@ -70,4 +71,9 @@ export interface Link {
 export interface Social {
 	name: string;
 	url: string;
+}
+
+export interface Features {
+	title: string;
+	description: string;
 }

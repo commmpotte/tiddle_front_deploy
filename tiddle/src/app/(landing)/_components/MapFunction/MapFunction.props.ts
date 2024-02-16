@@ -1,4 +1,9 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import {
+	DetailedHTMLProps,
+	Dispatch,
+	HTMLAttributes,
+	SetStateAction
+} from 'react';
 
 export interface MapFunctionProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -6,4 +11,6 @@ export interface MapFunctionProps
 	description: string;
 	page: number;
 	totalPage: number;
+	setDown: () => void;
+	setNext: () => void;
 }
