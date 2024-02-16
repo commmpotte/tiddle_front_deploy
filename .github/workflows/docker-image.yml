@@ -57,8 +57,4 @@ jobs:
             sudo docker pull ramiras123/tiddlefrontend:latest
             sudo docker-compose stop
             sudo docker-compose rm web
-            touch .env
-            echo NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }} >> .env
-            echo NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }} >> .env
-            echo NEXT_PUBLIC_DJANGO_HOST=${{ secrets.NEXT_PUBLIC_DJANGO_HOST }} >> .env
             sudo docker-compose up -d
