@@ -1,8 +1,9 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { Card } from '@/helps/landing.help';
 
-export interface PlanProps
+export interface MapFunctionProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	cards: Card[];
-	tag: string;
+	title: string;
+	description: string;
+	page: number;
+	totalPage: number;
 }
