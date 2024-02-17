@@ -3,6 +3,7 @@ import styles from './WhatIsIt.module.scss';
 import { Button } from '@/components/Button/Button';
 import { Title } from '../Title/Title';
 import { Tag } from '../Tag/Tag';
+import Image from 'next/image';
 export function WhatIsIt({
 	description,
 	animateText,
@@ -21,12 +22,26 @@ export function WhatIsIt({
 					textLink={textLink}
 				/>
 				<div className={styles.btnWrapper}>
-					<img src="/landing/standard.png" alt="" className={styles.fire} />
+					<Image
+						width={37}
+						height={37}
+						draggable={false}
+						src="/landing/standard.png"
+						alt=""
+						className={styles.fire}
+					/>
 					<Button className={styles.button}>Try now</Button>
 				</div>
 			</div>
 			<div className={styles.phones}>
-				<img src="/landing/phones.png" alt="" className={styles.imgPhones} />
+				<Image
+					width={900}
+					height={775}
+					src="/landing/phones.png"
+					alt="Iphone phone on the title"
+					className={styles.imgPhones}
+					draggable={false}
+				/>
 			</div>
 		</div>
 	);

@@ -6,5 +6,12 @@ module.exports = (phase, { defaultConfig }) => {
 			prependData: `@import "~@styles/_variables.scss";`
 		};
 	}
-	return defaultConfig;
+	return {
+		...defaultConfig,
+		swcMinify: true,
+		experimental: {
+			legacyBrowsers: false,
+		//	optimizeCss: true
+		},
+	};
 };

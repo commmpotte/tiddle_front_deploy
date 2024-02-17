@@ -1,3 +1,4 @@
+'use client';
 import { TagProps } from './Tag.props';
 import styles from './Tag.module.scss';
 import classNames from 'classnames';

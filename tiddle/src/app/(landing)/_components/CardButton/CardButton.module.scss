@@ -1,0 +1,11 @@
+.button {
+	@include box(55px, 55px);
+	border-radius: 50%;
+	border: none;
+	background: $main-colour-tint;
+	cursor: pointer;
+
+	&:focus {
+		background: $main-colour-elements;
+	}
+}

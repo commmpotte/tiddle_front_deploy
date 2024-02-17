@@ -1,8 +1,7 @@
+import { Features } from '@/helps/landing.help';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { Card } from '@/helps/landing.help';
 
-export interface PlanProps
+export interface FutersProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	cards: Card[];
-	tag: string;
+	futers: Features[];
 }

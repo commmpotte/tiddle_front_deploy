@@ -21,7 +21,6 @@ export function LoginForm() {
 		formState: { errors }
 	} = useForm<Inputs>();
 	const router = useRouter();
-	const searchParams = useSearchParams();
 	const onSubmit = async (data: Inputs) => {
 		const result = await signIn('credentials', {
 			username: data.username,
@@ -29,8 +28,13 @@ export function LoginForm() {
 			redirect: false
 		});
 		if (result && !result.error) {
+			const searchParams = useSearchParams();
 			const callback = searchParams.get('callbackUrl');
-			router.push(callback ? callback : '/');
+			if (callback) {
+				router.push(callback);
+			} else {
+				router.push('/');
+			}
 		} else if (result?.error) {
 			toast.error(result?.error);
 			setError('username', { type: 'error', message: result.error });

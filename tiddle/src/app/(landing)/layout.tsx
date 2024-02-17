@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 
 import './globals.scss';
-import { Providers } from '@/components/Providers/Providers';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -17,18 +16,11 @@ export default function LandingLayout({
 		<html lang="en">
 			<head>
 				<link
-					href="https://fonts.cdnfonts.com/css/eurofurence"
-					rel="stylesheet"
-				/>
-
-				<link
-					href="https://fonts.cdnfonts.com/css/sf-pro-display"
+					href="https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98772,98773,98775,98770"
 					rel="stylesheet"
 				></link>
 			</head>
-			<body style={{ scrollBehavior: 'smooth' }}>
-				<Providers>{children}</Providers>
-			</body>
+			<body style={{ scrollBehavior: 'smooth' }}>{children}</body>
 		</html>
 	);
 }
