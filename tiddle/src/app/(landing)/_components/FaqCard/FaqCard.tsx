@@ -39,7 +39,7 @@ export const FaqCard = motion(
 				if (active) {
 					reviewRef.current?.scrollIntoView({
 						behavior: 'smooth',
-						block: 'start'
+						block: 'center'
 					});
 					reviewRef.current?.focus();
 				}

@@ -6,6 +6,8 @@
 	width: 100%;
 	background: $white;
 	box-sizing: border-box;
+	cursor: default;
+	z-index: 100;
 
 	.column {
 		@include flexbox(flex-start, center, 94px, row);

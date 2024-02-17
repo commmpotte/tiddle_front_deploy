@@ -4,6 +4,7 @@
 	border: none;
 	letter-spacing: 0.2px;
 	padding: 8px 24px;
+	position: relative;
 	background: $main-colour-elements;
 	text-decoration: none;
 	white-space: nowrap;
@@ -18,17 +19,27 @@
 }
 
 .social {
-	@include flexbox(center, center, row);
+	@include flexbox(center, center);
 	@include box(94px, 94px);
 	box-shadow: 0 4px 40px 0 rgba(117, 117, 117, 0.15);
 	background: $white;
 	border-radius: 100px;
 	border: none;
+	position: relative;
 
 	transition: all 0.4s ease;
 
 	&:hover {
 		background: $stroke-colour;
+	}
+
+	img {
+		max-width: 64px;
+		max-height: 64px;
+		left: 50% !important;
+		top: 50% !important;
+		transform: translate(-50%, -50%) !important;
+		object-fit: none !important;
 	}
 }
 

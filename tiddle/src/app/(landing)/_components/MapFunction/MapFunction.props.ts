@@ -1,8 +1,6 @@
 import {
 	DetailedHTMLProps,
-	Dispatch,
 	HTMLAttributes,
-	SetStateAction
 } from 'react';
 
 export interface MapFunctionProps

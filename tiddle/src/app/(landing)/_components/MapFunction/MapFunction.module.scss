@@ -7,6 +7,7 @@
 	max-width: 584px;
 	box-sizing: border-box;
 	position: absolute;
+	cursor: default;
 
 	.textWrapper {
 		@include flexbox(center, flex-start, 20px);

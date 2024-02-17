@@ -2,6 +2,7 @@ import { Button } from '@/components/Button/Button';
 import { CardProps } from './Card.props';
 import styles from './Card.module.scss';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 export function Card({
 	type,
@@ -20,7 +21,15 @@ export function Card({
 				[styles.active]: active
 			})}
 		>
-			<img src={`/landing/${type}.png`} alt="" className={styles.imgType} />
+			<Image
+				width={80}
+				height={80}
+				draggable={false}
+				src={`/landing/${type}.png`}
+				alt={`${type}`}
+				priority={false}
+				className={styles.imgType}
+			/>
 			<div className={styles.textWrapper}>
 				<h3 className={styles.title}>
 					{type[0].toUpperCase() + type.slice(1).toLowerCase()}

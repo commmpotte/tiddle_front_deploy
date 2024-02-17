@@ -1,14 +1,16 @@
 .headerWrapper {
 	@include flexbox(center, center, 32px, column);
 	margin-bottom: 107px;
-
+	width: 100%;
 	img {
-		max-width: 100%;
-		height: auto;
+		position: relative !important;
+		max-width: 100% !important;
+		height: auto !important;
 	}
 	.headerText {
 		@include text-styles(28px, 129%, $text-main, 400);
 		@include flexbox(space-between, center, 20px, row);
 		width: 100%;
+		cursor: default;
 	}
 }

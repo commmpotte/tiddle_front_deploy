@@ -3,6 +3,7 @@ import { LinkBtnProps } from './LinkBtn.props';
 import styles from './LinkBtn.module.scss';
 import classNames from 'classnames';
 import Link from 'next/link';
+import Image from 'next/image';
 export function LinkBtn({
 	children = '',
 	className,
@@ -23,7 +24,16 @@ export function LinkBtn({
 			{...props}
 		>
 			{!social && children}
-			{social && <img src={`/landing/${children}.png`} />}
+			{social && (
+				<Image
+					draggable={false}
+					fill={true}
+					unoptimized
+					priority={false}
+					src={`/landing/social/${children}.svg`}
+					alt={`social ${children}`}
+				/>
+			)}
 		</Link>
 	);
 }

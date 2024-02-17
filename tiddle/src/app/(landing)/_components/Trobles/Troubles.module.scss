@@ -2,6 +2,8 @@
 	@include flexbox(center, center, 86px, column);
 	margin-top: 91px;
 	margin-bottom: 142px;
+	cursor: default;
+
 	.titleWrapper {
 		@include flexbox(center, center, 20px, column);
 	}

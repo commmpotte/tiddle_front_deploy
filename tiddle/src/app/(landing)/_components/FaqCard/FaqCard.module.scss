@@ -18,7 +18,7 @@
 		padding: 11px;
 	}
 	.text {
-		@include text-styles(28px, 129%, $text-main, 500);
+		@include text-styles(28px, 129%, $text-main, 500, left);
 		letter-spacing: 0.01em;
 	}
 	.arrow {

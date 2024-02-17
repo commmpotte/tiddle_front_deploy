@@ -52,34 +52,6 @@
 			max-width: 100%;
 			height: auto;
 		}
-		.tests {
-			@include grid([start] 1fr 1fr [end], auto auto);
-			z-index: 100;
-			margin-top: 268px;
-
-			.tag {
-				@include gridContainer(baseline, baseline, start / end);
-				color: $white;
-				border: 2px solid $white;
-				background: #9251ff;
-			}
-			.quiz {
-				@include gridContainer(center, flex-end, 1);
-				position: relative;
-			}
-
-			.iphone {
-				@include gridContainer(center, center, 2);
-				width: 100%;
-				margin-right: 300px;
-
-				img {
-					max-width: 100%;
-					height: auto;
-					// margin-left: -100px;
-				}
-			}
-		}
 	}
 }
 
